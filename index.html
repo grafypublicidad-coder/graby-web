@@ -760,10 +760,10 @@ section[id],div[id]{scroll-margin-top:84px}
     {n:'Llavero de acrílico espejado', p:1700, d50:30, min:25, id:'llavero_acrilico'},
     {n:'Llavero destapador', p:1900, d50:30, min:25},
     {n:'Mate copita grabado', p:9400, id:'mate_copita'},
-    {n:'Mate de acero grabado', p:10500, id:'mates_acero'},
+    {n:'Mate de acero grabado', p:9800, from:1, id:'mates_acero'},
     {n:'Mate camionero grabado', p:23900, id:'mate_camionero'},
     {n:'Vaso de litro de aluminio', p:null, id:'vaso_evento'},
-    {n:'Gorra trucker con DTF', p:null, id:'gorras'}
+    {n:'Gorra trucker con DTF', p:6000, from:1, id:'gorras'}
   ];
   // Parámetros de tu planilla de costos (hoja Supuestos / Materiales). Si cambian, el precio de stickers se recalcula solo.
   var SYS = {gastos:.10, merma:.10, toner:800, opp:700, desgaste:60, laminado:300, recorteMin:6, horaRecorte:10000, redondeo:500,
@@ -842,19 +842,19 @@ section[id],div[id]{scroll-margin-top:84px}
   var CATS=['Todo','Regalos empresariales','Eventos','Comercios','Sellos','Imprenta','Textil','Placas y carteles','Regalos personales'];
   var ITEMS=[
    {i:'termo',c:['Regalos empresariales'],k:'Regalos · Termos',t:'Termo grabado con tu logo',d:'Termos de 1 L o 1,2 L, con logo, nombre o frase. Combina con mate y bombilla.',p:'Precio por cantidad'},
-   {i:'mates_acero',c:['Regalos empresariales','Eventos'],k:'Regalos · Mates',t:'Mate de acero grabado',d:'Acero inoxidable en blanco o negro. Ideal para souvenirs y regalos de empresa.',p:'$10.500',cut:1},
+   {i:'mates_acero',c:['Regalos empresariales','Eventos'],k:'Regalos · Mates',t:'Mate de acero grabado',d:'Acero inoxidable en blanco o negro. Ideal para souvenirs y regalos de empresa.',p:'Desde $9.800',cut:1},
    {i:'mate_camionero',c:['Regalos empresariales'],k:'Regalos · Mates',t:'Mate camionero de calabaza',d:'Grabado láser con tu logo o nombre. El favorito para fin de año.',p:'Precio por cantidad',cut:1},
-   {i:'mate_imperial',c:['Regalos empresariales'],k:'Regalos · Mates',t:'Mate imperial de calabaza',d:'Grabado láser con tu logo o nombre, para regalos de empresa.',p:'Precio por cantidad',cut:1},
-   {i:'vaso_chopp',c:['Regalos empresariales','Eventos'],k:'Vasos térmicos',t:'Vaso térmico cervecero',d:'Acero inoxidable de 500 ml o 1 L, con tapa destapador y tu logo grabado.',p:'Precio por cantidad',cut:1},
+   {i:'mate_imperial',c:['Regalos empresariales'],k:'Regalos · Mates',t:'Mate imperial de calabaza',d:'Grabado láser con tu logo o nombre, para regalos de empresa.',p:'$37.000',cut:1},
+   {i:'vaso_chopp',c:['Regalos empresariales','Eventos'],k:'Vasos térmicos',t:'Vaso térmico cervecero',d:'Acero inoxidable de 500 ml o 1 L, con tapa destapador y tu logo grabado.',p:'Desde $14.000',cut:1},
    {i:'llavero3d',c:['Regalos empresariales','Eventos'],k:'Impresión 3D',t:'Llavero soporte de celular',d:'Plegable, sostiene el celular y lleva tu logo impreso en 3D.',p:'Precio por cantidad'},
    {i:'bolsas',c:['Regalos empresariales','Textil','Comercios'],k:'Textil · Bolsas',t:'Bolsas de friselina sublimadas',d:'Livianas, reutilizables y con tu diseño a todo color.',p:'Precio por cantidad'},
    {i:'vaso_evento',c:['Eventos','Regalos empresariales'],k:'Eventos · Vasos',t:'Vaso de litro de aluminio',d:'De aluminio, de 1 litro, no se rompe en la fiesta. Con escudo, nombre o logo. Ideal para fernet.',p:'Precio por cantidad'},
-   {i:'trofeo',c:['Eventos'],k:'Eventos · Trofeos',t:'Trofeos de acrílico y MDF',d:'25 cm de alto, con nombre, evento y año grabados.',p:'Desde $16.400'},
+   {i:'trofeo',c:['Eventos'],k:'Eventos · Trofeos',t:'Trofeos de acrílico y MDF',d:'25 cm de alto, con nombre, evento y año grabados.',p:'Desde $15.000'},
    {i:'qr_cartas',c:['Comercios'],k:'Carteles · QR',t:'QR para cartas',d:'Acrílico dorado, plateado o negro, con el diseño de tu marca.',p:'Precio por cantidad'},
    {i:'qr_google',c:['Comercios'],k:'Carteles · QR',t:'QR para reseñas de Google',d:'Acrílico transparente de 4 mm, en 10x15 o 15x20 cm.',p:'Precio por cantidad'},
    {i:'qr_negocio',c:['Comercios'],k:'Carteles · QR',t:'Cartel QR para tu negocio',d:'Acrílico o MDF a medida, con redes y datos de pago.',p:'Precio por cantidad'},
    {i:'qr_menu',c:['Comercios'],k:'Carteles · 3D',t:'QR para menús en 3D',d:'Letras en relieve con el QR de tu carta, resistentes al calor y a los golpes.',p:'Precio por cantidad'},
-   {i:'sellos_auto',c:['Sellos','Comercios'],k:'Sellos · Automáticos',t:'Sello automático',d:'5 medidas, de 26x9 a redondo 40. Entintado automático, sin almohadilla aparte.',p:'Desde $18.400',cut:1},
+   {i:'sellos_auto',c:['Sellos','Comercios'],k:'Sellos · Automáticos',t:'Sello automático',d:'5 medidas, de 26x9 a redondo 40. Entintado automático, sin almohadilla aparte.',p:'Desde $18.000',cut:1},
    {i:'sello_manual',c:['Sellos'],k:'Sellos · Manuales',t:'Sello manual de goma',d:'4x2, 5x5, 8x5 y redondo, con mango de madera. Almohadilla aparte ($7.900).',p:'Desde $15.900'},
    {i:'sellos_cajas',c:['Sellos','Comercios'],k:'Sellos · Grandes',t:'Sellos grandes para cajas',d:'Para marcar cajas y bolsas con tu logo. Goma grabada a láser con base de madera.',p:'Consultá precio'},
    {i:'placa_recuerdo',c:['Placas y carteles'],k:'Placas · Recordatorias',t:'Placa recordatoria',d:'Acrílico negro, dorado o plateado, de 15x10 a 30x20 cm. Te mostramos la prueba antes.',p:'Consultá precio'},
@@ -876,7 +876,7 @@ section[id],div[id]{scroll-margin-top:84px}
    {i:'recetarios',c:['Imprenta','Comercios'],k:'Imprenta',t:'Recetarios y talonarios',d:'Con tu logo y tus datos, en el tamaño que uses.',p:'Precio por cantidad',cut:1},
    {i:'anotadores',c:['Imprenta','Regalos empresariales'],k:'Imprenta',t:'Anotadores anillados',d:'Con la tapa impresa con tu marca. Para eventos y regalos de empresa.',p:'Precio por cantidad'},
    {i:'remeras',c:['Textil'],k:'Textil · Remeras',t:'Remeras con tu diseño',d:'Oversize, clásico o boxy fit, en DTF o sublimación. También chombas para tu equipo.',p:'Desde $17.500',cut:1},
-   {i:'gorras',c:['Textil','Regalos empresariales'],k:'Textil · Gorras',t:'Gorra trucker con DTF',d:'Tu logo estampado en DTF, a todo color. 11 colores de gorra, consultá stock.',p:'Precio por cantidad',cut:1},
+   {i:'gorras',c:['Textil','Regalos empresariales'],k:'Textil · Gorras',t:'Gorra trucker con DTF',d:'Tu logo estampado en DTF, a todo color. 11 colores de gorra, consultá stock.',p:'Desde $6.000',cut:1},
    {i:'tambor',c:['Regalos personales'],k:'Impresión 3D · Deco',t:'Portalatas tambor 3D',d:'Impreso en el color que elijas, con detalles en un segundo color y tu nombre o logo.',p:'Consultá precio'}
 ,
    {i:'centro_mesa',c:['Eventos'],k:'Eventos · Egresados',t:'Centro de mesa para egresados',d:'Acrílico espejado dorado, plateado o negro, con nombre y año cortados a láser. Con base.',p:'Precio por cantidad',cut:1},
@@ -984,8 +984,8 @@ section[id],div[id]{scroll-margin-top:84px}
 </script>
 <script>
 (function(){
-  var BOX=[['sellos_auto','Sellos automáticos','A medida'],['gorras','Gorra trucker','Por cantidad'],['mates_acero','Mate de acero','$10.500'],['trofeo','Trofeos','Por cantidad'],['vaso_chopp','Vaso cervecero','Por cantidad'],['mate_imperial','Mate imperial','Por cantidad']];
-  var GAL=[['mates_acero','Mate de acero','$10.500'],['mate_copita','Mate copita','$9.400'],['mate_camionero','Mate camionero','$23.900'],['jarro_chopp','Jarro chopp','Por cantidad'],['vaso_evento','Vaso de litro de aluminio','Por cantidad'],['gorras','Gorra trucker con DTF','Por cantidad'],['trofeo','Trofeos','Desde $16.400'],['llavero_acrilico','Llavero de acrílico','$2.900'],['stickers','Stickers','100 desde $9.500'],['sello_manual','Sellos','A medida'],['centro_mesa','Centro de mesa','Por cantidad'],['placa_recuerdo','Placas','Consultá precio'],['corporeo','Carteles con luz','A medida']];
+  var BOX=[['sellos_auto','Sellos automáticos','Desde $18.000'],['gorras','Gorra trucker','Desde $6.000'],['mates_acero','Mate de acero','Desde $9.800'],['trofeo','Trofeos','Desde $15.000'],['vaso_chopp','Vaso cervecero','Desde $14.000'],['mate_imperial','Mate imperial','$37.000']];
+  var GAL=[['mates_acero','Mate de acero','Desde $9.800'],['mate_copita','Mate copita','$9.400'],['mate_camionero','Mate camionero','$23.900'],['jarro_chopp','Jarro chopp','Por cantidad'],['vaso_evento','Vaso de litro de aluminio','Por cantidad'],['gorras','Gorra trucker con DTF','Desde $6.000'],['trofeo','Trofeos','Desde $15.000'],['llavero_acrilico','Llavero de acrílico','$1.700'],['stickers','Stickers','100 desde $9.500'],['sello_manual','Sellos','A medida'],['centro_mesa','Centro de mesa','Por cantidad'],['placa_recuerdo','Placas','Consultá precio'],['corporeo','Carteles con luz','A medida']];
   var track=document.getElementById('xtrack');
   track.innerHTML=GAL.map(function(g){return '<a class="x-card" href="#p-'+g[0]+'"><img src="img/'+g[0]+'.jpg" alt="'+g[1]+'" loading="lazy"><div><b>'+g[1]+'</b><span>'+g[2]+'</span></div></a>'}).join('');
   var sec=document.getElementById('caja'),items=document.getElementById('xitems'),bBack=document.getElementById('bBack'),bFront=document.getElementById('bFront'),bLid=document.getElementById('bLid'),head=document.getElementById('xhead'),cue=document.getElementById('xcue'),lead=document.getElementById('xlead');
