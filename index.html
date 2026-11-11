@@ -516,12 +516,13 @@ section[id],div[id]{scroll-margin-top:84px}
     </form>
     <div>
       <table class="scale">
-        <caption class="note" style="text-align:left;caption-side:top;margin:0 0 8px">Descuento por cantidad en llaveros</caption><thead><tr><th>Cantidad</th><th>Descuento</th></tr></thead>
+        <caption class="note" style="text-align:left;caption-side:top;margin:0 0 8px">Descuento por cantidad</caption><thead><tr><th>Cantidad</th><th>Descuento</th></tr></thead>
         <tbody>
           <tr><td>1 a 9 unidades</td><td>Precio de lista</td></tr>
           <tr><td>10 a 49 unidades</td><td>10 %</td></tr>
           <tr><td>50 a 99 unidades</td><td>18 %</td></tr>
           <tr><td>100 o más</td><td>20 %</td></tr>
+          <tr><td>Llaveros de acrílico y destapador, 50 o más</td><td>30 %</td></tr>
         </tbody>
       </table>
       <div class="kits">
@@ -747,8 +748,8 @@ section[id],div[id]{scroll-margin-top:84px}
   var WA = '5493735408500';
   var PRODUCTS = [
     {n:'Stickers', stk:1},
-    {n:'Llavero de acrílico espejado', p:2900},
-    {n:'Llavero destapador', p:2600, from:1},
+    {n:'Llavero de acrílico espejado', p:2900, d50:30},
+    {n:'Llavero destapador', p:2600, from:1, d50:30},
     {n:'Mate copita grabado', p:9400},
     {n:'Mate de acero grabado', p:10500},
     {n:'Mate camionero grabado', p:23900},
@@ -765,7 +766,7 @@ section[id],div[id]{scroll-margin-top:84px}
   var sel = $('prod'), qty = $('qty');
   PRODUCTS.forEach(function(x,i){var o=document.createElement('option');o.value=i;o.textContent=x.n;sel.appendChild(o)});
   Object.keys(STK).forEach(function(k){var o=document.createElement('option');o.value=k;o.textContent=k;$('stsz').appendChild(o)});
-  function tier(q){return q>=100?20:q>=50?18:q>=10?10:0}
+  function tier(q,x){var b=q>=100?20:q>=50?18:q>=10?10:0;return (x&&x.d50&&q>=50)?Math.max(b,x.d50):b}
   function isStk(){return !!PRODUCTS[+sel.value].stk}
   function qn(){return Math.max(1, parseInt(qty.value,10) || 1)}
   function stkPrice(sz, lam, cut, q){
@@ -795,7 +796,7 @@ section[id],div[id]{scroll-margin-top:84px}
       $('tot').textContent = fmt(r.total);
       $('hint').textContent = 'Entran ' + STK[$('stsz').value] + ' stickers de ' + $('stsz').value + ' por hoja. Cuantos más pedís, menos sale cada uno.';
     } else {
-      var d = tier(q);
+      var d = tier(q,x);
       $('disclbl').textContent = 'Descuento';
       $('disc').textContent = d ? d + ' %' : '0 %';
       if(x.p == null){
@@ -805,7 +806,7 @@ section[id],div[id]{scroll-margin-top:84px}
         var u = d ? round(x.p*(1-d/100)) : x.p;
         $('unit').textContent = fmt(u);
         $('tot').textContent = fmt(u*q);
-        $('hint').textContent = (x.from ? 'Precio desde: puede variar según el modelo y el grabado. ' : '') + (q < 10 ? 'El descuento por cantidad empieza en 10 unidades.' : (q < 100 ? 'Con ' + (q < 50 ? 50 : 100) + ' unidades el descuento sube.' : 'Ya estás en el mejor descuento.'));
+        $('hint').textContent = (x.from ? 'Precio desde: puede variar según el modelo y el grabado. ' : '') + (q < 10 ? 'El descuento por cantidad empieza en 10 unidades.' : (q < 100 && !(x.d50 && q >= 50) ? 'Con ' + (q < 50 ? 50 : 100) + ' unidades el descuento sube' + (x.d50 && q < 50 ? ' al ' + x.d50 + ' %.' : '.') : 'Ya estás en el mejor descuento.'));
       }
     }
     link();
