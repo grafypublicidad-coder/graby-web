@@ -334,6 +334,13 @@ section[id],div[id]{scroll-margin-top:84px}
 .aside{margin-top:40px;font-size:17px;color:var(--muted)}
 .aside a{color:var(--accent);font-weight:600}
 /* ===== escenario de la caja + riel (versión 2) ===== */
+.ref{display:flex;align-items:center;gap:14px;margin-top:16px;padding:10px;border:1.5px solid var(--soft);border-radius:14px;text-decoration:none;color:inherit}
+.ref:hover{border-color:var(--accent)}
+.ref img{width:76px;height:76px;flex:none;object-fit:cover;border-radius:10px;background:#fff}
+.ref span{display:flex;flex-direction:column;gap:2px;min-width:0}
+.ref small{font-family:var(--mono);font-weight:700;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.ref b{font-weight:600;font-size:17px;line-height:1.2}
+.ref i{font-style:normal;font-size:14px;color:var(--accent);text-decoration:underline}
 .morewrap{display:flex;flex-direction:column;align-items:center;gap:14px;margin-top:34px}
 .morewrap .mono{color:var(--muted);font-size:12px}
 .x-bleed{margin:0 calc(-1 * var(--gr)) 0 calc(-1 * var(--gl))}
@@ -505,6 +512,7 @@ section[id],div[id]{scroll-margin-top:84px}
       </div>
       <div class="fld" id="qtyw"><label for="qty">Cantidad</label>
         <input id="qty" type="number" inputmode="numeric" min="1" max="5000" value="50"></div>
+      <a class="ref" id="ref" href="#rubros" hidden><img id="refimg" src="img/stickers.jpg" alt=""><span><small>Referencia del pedido</small><b id="refname"></b><i>Ver la ficha del producto</i></span></a>
       <div class="out" aria-live="polite">
         <div><small>Por unidad</small><strong id="unit">-</strong></div>
         <div><small id="disclbl">Descuento</small><strong id="disc">-</strong></div>
@@ -523,6 +531,7 @@ section[id],div[id]{scroll-margin-top:84px}
           <tr><td>50 a 99 unidades</td><td>18 %</td></tr>
           <tr><td>100 o más</td><td>20 %</td></tr>
           <tr><td>Llaveros de acrílico y destapador, 50 o más</td><td>30 %</td></tr>
+          <tr><td>Llaveros: pedido mínimo</td><td>25 unidades</td></tr>
         </tbody>
       </table>
       <div class="kits">
@@ -747,14 +756,14 @@ section[id],div[id]{scroll-margin-top:84px}
   // Cargá acá el número de WhatsApp con código de país, sin + ni espacios. Ejemplo: 5493624123456
   var WA = '5493735408500';
   var PRODUCTS = [
-    {n:'Stickers', stk:1},
-    {n:'Llavero de acrílico espejado', p:2900, d50:30},
-    {n:'Llavero destapador', p:2600, from:1, d50:30},
-    {n:'Mate copita grabado', p:9400},
-    {n:'Mate de acero grabado', p:10500},
-    {n:'Mate camionero grabado', p:23900},
-    {n:'Vaso de litro de aluminio', p:null},
-    {n:'Gorra trucker con DTF', p:null}
+    {n:'Stickers', stk:1, id:'stickers'},
+    {n:'Llavero de acrílico espejado', p:1700, d50:30, min:25, id:'llavero_acrilico'},
+    {n:'Llavero destapador', p:1900, d50:30, min:25},
+    {n:'Mate copita grabado', p:9400, id:'mate_copita'},
+    {n:'Mate de acero grabado', p:10500, id:'mates_acero'},
+    {n:'Mate camionero grabado', p:23900, id:'mate_camionero'},
+    {n:'Vaso de litro de aluminio', p:null, id:'vaso_evento'},
+    {n:'Gorra trucker con DTF', p:null, id:'gorras'}
   ];
   // Parámetros de tu planilla de costos (hoja Supuestos / Materiales). Si cambian, el precio de stickers se recalcula solo.
   var SYS = {gastos:.10, merma:.10, toner:800, opp:700, desgaste:60, laminado:300, recorteMin:6, horaRecorte:10000, redondeo:500,
@@ -778,16 +787,22 @@ section[id],div[id]{scroll-margin-top:84px}
     return {hojas:hojas, total: Math.round(hojas * costo * f / SYS.redondeo) * SYS.redondeo};
   }
   function stkNow(q){return stkPrice($('stsz').value, $('stfin').value === 'lam', +$('stcut').value === 1, q)}
+  var SITE='https://graby.online/';
+  function refLine(x){return x.id ? '\nReferencia: ' + SITE + '#p-' + x.id : ''}
   function msg(){
-    var x = PRODUCTS[+sel.value], q = qn();
+    var x = PRODUCTS[+sel.value], q = Math.max(qn(), x.min || 0);
     if(x.stk){
-      return 'Hola Graby, quiero un presupuesto: ' + q + ' stickers de ' + $('stsz').value + ' cm, ' + ($('stfin').value==='lam'?'laminados':'sin laminar') + ', ' + (+$('stcut').value?'recortados':'sin recortar (en plancha)') + '. ¿Me pasan precio y fecha de entrega?';
+      return 'Hola Graby, quiero un presupuesto: ' + q + ' stickers de ' + $('stsz').value + ' cm, ' + ($('stfin').value==='lam'?'laminados':'sin laminar') + ', ' + (+$('stcut').value?'recortados':'sin recortar (en plancha)') + '. ¿Me pasan precio y fecha de entrega?' + refLine(x);
     }
-    return 'Hola Graby, quiero un presupuesto por mayor: ' + q + ' x ' + x.n + '. ¿Me pasan precio y fecha de entrega?';
+    return 'Hola Graby, quiero un presupuesto por mayor: ' + q + ' x ' + x.n + '. ¿Me pasan precio y fecha de entrega?' + refLine(x);
   }
   function calc(){
     var x = PRODUCTS[+sel.value], st = !!x.stk, q = qn();
+    if(x.min && q < x.min && document.activeElement !== qty){qty.value = x.min; q = x.min}
     $('stk').hidden = !st;
+    var it = x.id ? ITEMS.filter(function(y){return y.i === x.id})[0] : null, rf = $('ref');
+    rf.hidden = !it;
+    if(it){rf.href = '#p-' + it.i; $('refimg').src = 'img/' + it.i + '.jpg'; $('refimg').alt = it.t; $('refname').textContent = it.t}
     if(st){
       var r = stkNow(q);
       $('unit').textContent = fmt(r.total/q);
@@ -799,7 +814,10 @@ section[id],div[id]{scroll-margin-top:84px}
       var d = tier(q,x);
       $('disclbl').textContent = 'Descuento';
       $('disc').textContent = d ? d + ' %' : '0 %';
-      if(x.p == null){
+      if(x.min && q < x.min){
+        $('unit').textContent = fmt(x.p); $('disc').textContent = '—'; $('tot').textContent = '—';
+        $('hint').textContent = 'El pedido mínimo de este producto es de ' + x.min + ' unidades.';
+      } else if(x.p == null){
         $('unit').textContent = 'A cotizar'; $('tot').textContent = 'A cotizar';
         $('hint').textContent = 'Este precio lo confirmamos por WhatsApp, según el modelo y la cantidad.';
       } else {
@@ -847,7 +865,7 @@ section[id],div[id]{scroll-margin-top:84px}
    {i:'mate_copita',c:['Eventos','Regalos personales'],k:'Regalos · Mates',t:'Mate copita para souvenirs',d:'Madera, tamaño clásico, grabado con tu logo o un nombre.',p:'$9.400',cut:1},
    {i:'birome',c:['Regalos empresariales','Imprenta'],k:'Papelería corporativa',t:'Birome de bambú grabada',d:'Retráctil, con detalles cromados. Área de grabado de 0,5 x 4 cm.',p:'Precio por cantidad',cut:1},
    {i:'jarro_chopp',c:['Regalos empresariales','Eventos'],k:'Bar · Vasos térmicos',t:'Jarro chopp de acero',d:'Térmico de 500 ml, con tu logo grabado a láser.',p:'Precio por cantidad',cut:1},
-   {i:'llavero_acrilico',c:['Regalos empresariales','Regalos personales'],k:'Llaveros · Acrílico',t:'Llavero de acrílico espejado',d:'Bicapa dorado o plateado, en círculo, corazón o con la forma de tu logo.',p:'Precio por cantidad'},
+   {i:'llavero_acrilico',c:['Regalos empresariales','Regalos personales'],k:'Llaveros · Acrílico',t:'Llavero de acrílico espejado',d:'Bicapa dorado o plateado, en círculo, corazón o con la forma de tu logo.',p:'$1.700 · mínimo 25 unidades'},
    {i:'llaveros3d',c:['Regalos empresariales','Regalos personales'],k:'Impresión 3D',t:'Llaveros 3D con tu diseño',d:'Con tu inicial o el logo de tu local. Ideales para regalar.',p:'Precio por cantidad'},
    {i:'pulseras',c:['Eventos'],k:'Eventos · Accesos',t:'Pulseras tyvek',d:'No se rompen ni se mojan. Numeradas, con cierre que no se abre e impresas con tu evento.',p:'Precio por cantidad',cut:1},
    {i:'ticket',c:['Eventos'],k:'Eventos · Accesos',t:'Entradas infalsificables',d:'108 x 60 mm, con textos e imágenes que solo se ven con luz UV.',p:'Precio por cantidad',cut:1},
