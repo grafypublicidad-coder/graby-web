@@ -1,0 +1,1016 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Graby · Grabado láser, sellos, placas y regalos empresariales</title>
+<meta name="description" content="Graby, taller de grabado láser en Coronel Du Graty, Chaco. Regalos empresariales, souvenirs para eventos, sellos, placas, stickers, impresión 3D y cartelería. Precio por mayor desde 10 unidades.">
+<meta property="og:title" content="Graby · Tu marca siempre presente">
+<meta property="og:description" content="Regalos empresariales y souvenirs con tu logo. Grabado láser, sellos, placas, stickers, 3D y cartelería. Coronel Du Graty, Chaco.">
+<meta property="og:image" content="img/mates_acero.jpg">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#131236">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='9' fill='%232F2CB4'/%3E%3Cpath d='M28 13.5A10 10 0 1 0 30 21.2V20h-9' fill='none' stroke='%23F4F0E7' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='29.6' cy='17' r='2' fill='%23D9702B'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,400..900;1,400..900&family=Space+Mono:wght@400;700&display=swap">
+<style>html{color-scheme:dark}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<style>
+/* Concepto: taller de pueblo con aire de imprenta moderna. Héroe azul pleno con un haz láser cobre que baja una vez y marca la pieza; el resto es hueso (o noche) y tipografía grande. */
+:root{
+  --bg:#FFFFFF; --fg:#131236; --muted:#5E5D70; --accent:#2F2CB4; --panel:#E4E3F5; --line:#131236;
+  --btn-bg:#2F2CB4; --btn-fg:#F4F0E7; --copper:#D9702B; --lav:#9C9AF4; --soft:#D8D5EA;
+  --hero:#2F2CB4; --hero-fg:#F4F0E7; --cta-bg:#131236; --cta-fg:#F4F0E7;
+  --display:'Inter Tight','Arial Black',Arial,sans-serif; --body:'Inter Tight',Arial,Helvetica,sans-serif; --mono:'Space Mono','Courier New',monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#131236; --fg:#F4F0E7; --muted:#B0AFCB; --accent:#9C9AF4; --panel:#1E1C52; --line:#F4F0E7;
+  --btn-bg:#F4F0E7; --btn-fg:#131236; --soft:#34327A; --cta-bg:#2F2CB4; --cta-fg:#F4F0E7; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#131236; --fg:#F4F0E7; --muted:#B0AFCB; --accent:#9C9AF4; --panel:#1E1C52; --line:#F4F0E7;
+  --btn-bg:#F4F0E7; --btn-fg:#131236; --soft:#34327A; --cta-bg:#2F2CB4; --cta-fg:#F4F0E7; color-scheme:dark}
+
+:root,:root[data-theme="light"],:root[data-theme="dark"]{
+  --bg:#131236; --fg:#F4F0E7; --muted:#B9B8D6; --accent:#9C9AF4; --panel:#1E1C52; --line:#F4F0E7;
+  --btn-bg:#F4F0E7; --btn-fg:#131236; --soft:#34327A; --cta-bg:#2F2CB4; --cta-fg:#F4F0E7; color-scheme:dark;
+  --gl:max(16px,env(safe-area-inset-left,0px)); --gr:max(16px,env(safe-area-inset-right,0px))}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--body);font-size:17px;line-height:1.55;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--bg)}
+h1,h2,h3,p{margin:0}
+h1,h2,h3{text-wrap:balance}
+a{color:inherit}
+.wrap{max-width:1160px;margin:0 auto}
+.mono{font-family:var(--mono);font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:13px}
+.rule{display:inline-block;width:40px;height:4px;background:var(--copper);vertical-align:middle;margin-right:14px}
+.display{font-family:var(--display);font-weight:900;font-style:italic;letter-spacing:-.045em;line-height:.94}
+:focus-visible{outline:3px solid var(--copper);outline-offset:3px}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 28px;border-radius:999px;background:var(--btn-bg);color:var(--btn-fg);font-weight:600;font-size:17px;text-decoration:none;border:2px solid transparent;cursor:pointer;font-family:var(--body);transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn.ghost{background:transparent;color:inherit;border-color:currentColor}
+
+/* Encabezado */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:60;background:rgba(19,18,54,.82);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-bottom:1.5px solid rgba(244,240,231,.16);margin:0 calc(-1 * var(--gr)) 0 calc(-1 * var(--gl));padding:0 var(--gr) 0 var(--gl)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:68px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--accent)}
+.brand span{font-family:var(--display);font-weight:900;font-style:italic;font-size:30px;letter-spacing:-.045em;line-height:1}
+.nav{display:flex;gap:22px}
+.nav a{text-decoration:none;font-weight:500;font-size:16px}
+.nav a:hover{color:var(--accent)}
+.top .btn{min-height:44px;padding:0 20px;font-size:15px}
+@media(max-width:820px){.top .wrap{flex-wrap:wrap;row-gap:0;padding-bottom:10px}.nav{order:3;flex:1 0 100%;gap:8px;overflow-x:auto;scrollbar-width:none;padding:2px 0}.nav::-webkit-scrollbar{display:none}.nav a{white-space:nowrap;min-height:40px;display:inline-flex;align-items:center;padding:0 14px;border-radius:999px;background:var(--panel);font-size:15px;font-weight:600}.nav a.on{background:var(--btn-bg);color:var(--btn-fg);text-decoration:none}section[id],div[id]{scroll-margin-top:132px}}
+
+/* Héroe */
+.hero{background:var(--hero);color:var(--hero-fg);margin:0 calc(-1 * max(16px,env(safe-area-inset-left,0px))) 0 calc(-1 * max(16px,env(safe-area-inset-right,0px)));padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));overflow:hidden;position:relative}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:32px;align-items:center;padding-block:72px 120px}
+.hero .mono{color:#C9C8FA;display:block;margin-bottom:22px}
+.hero h1{font-size:clamp(54px,9vw,128px)}
+.hero h1 em{font-style:inherit;color:var(--copper)}
+.hero p.lead{font-size:clamp(18px,2vw,22px);max-width:30em;margin-top:26px;color:#EEEBFF}
+.hero .acts{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+.hero .btn{background:#F4F0E7;color:#131236}
+.hero .btn.ghost{background:transparent;color:#F4F0E7;border-color:#F4F0E7}
+.art{position:relative;height:440px;min-width:0}
+.art .dots{position:absolute;right:-20px;bottom:-10px;width:340px;height:260px;background-image:radial-gradient(rgba(156,154,244,.6) 2.5px,transparent 3.2px);background-size:26px 26px;opacity:.5}
+.beam{position:absolute;left:46%;top:-80px;width:4px;height:250px;background:var(--copper);transform-origin:top;animation:beam .9s cubic-bezier(.3,.7,.2,1) .3s both}
+.spot{position:absolute;left:calc(46% - 30px);top:158px;width:64px;height:64px;border-radius:50%;background:radial-gradient(rgba(217,112,43,.7),rgba(217,112,43,0) 70%);animation:pulse 1.6s ease-in-out 1.2s infinite}
+.spot::after{content:"";position:absolute;left:24px;top:24px;width:16px;height:16px;border-radius:50%;background:var(--copper)}
+@keyframes beam{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+@keyframes pulse{50%{opacity:.55;transform:scale(1.25)}}
+.piece{position:absolute;border-radius:22px;display:flex;align-items:center;justify-content:center;gap:10px;box-shadow:0 28px 50px rgba(8,7,40,.45)}
+.piece span{font-family:var(--display);font-weight:900;font-style:italic;letter-spacing:-.045em;line-height:1}
+.p1{left:2%;top:70px;width:300px;height:150px;background:#C9A57A;color:#4A3520;transform:rotate(-6deg);background-image:repeating-linear-gradient(8deg,rgba(74,53,32,.08) 0 3px,transparent 3px 20px)}
+.p1 span{font-size:60px}
+.p2{left:36%;top:250px;width:250px;height:122px;background:#131236;color:#F4F0E7;transform:rotate(5deg)}
+.p2 span{font-size:48px}
+.facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:2px solid rgba(244,240,231,.35)}
+.facts div{padding:20px 20px 24px 0;font-size:16px}
+.facts b{display:block;font-family:var(--mono);letter-spacing:.14em;font-size:13px;text-transform:uppercase;color:#C9C8FA;margin-bottom:4px}
+@media(max-width:860px){
+  .hero .wrap{grid-template-columns:minmax(0,1fr);padding-block:48px 80px}
+  .art{height:310px}
+  .beam{height:150px;top:-60px}.spot{top:58px}
+  .p1{width:230px;height:116px;top:60px}.p1 span{font-size:46px}
+  .p2{top:190px;width:190px;height:96px}.p2 span{font-size:38px}
+  .facts{grid-template-columns:minmax(0,1fr)}
+  .facts div{padding:14px 0}
+}
+
+/* Secciones */
+section{padding-block:88px}
+.sec-h{display:flex;flex-direction:column;gap:14px;margin-bottom:44px;max-width:760px}
+.sec-h .mono{color:var(--accent)}
+.sec-h h2{font-size:clamp(38px,6vw,72px)}
+.sec-h p{color:var(--muted);font-size:19px;max-width:34em}
+@media(max-width:700px){section{padding-block:60px}}
+
+/* Títulos centrados con raya */
+.sec-h.center{margin-inline:auto;text-align:center;align-items:center}
+.sec-h.center h2::after{content:"";display:block;width:56px;height:5px;border-radius:3px;background:var(--copper);margin:20px auto 0}
+.sec-h.center .rule{display:none}
+
+/* Franja de confianza */
+.trust{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:-48px;position:relative;z-index:2}
+.t{display:flex;gap:14px;align-items:center;padding:18px 20px;border-radius:18px;background:var(--bg);border:1.5px solid var(--soft);box-shadow:0 14px 30px rgba(19,18,54,.14);min-width:0}
+.t .ic{flex:none;width:48px;height:48px;border-radius:50%;background:#2F2CB4;display:grid;place-items:center}
+.t b{display:block;font-weight:600;font-size:17px;line-height:1.3}
+.t span{display:block;color:var(--muted);font-size:15px;line-height:1.4}
+@media(max-width:860px){.trust{grid-template-columns:minmax(0,1fr);margin-top:-36px;gap:10px}}
+
+/* Rubros en tarjetas */
+.rows{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.row{display:flex;flex-direction:column;gap:18px;padding:10px 10px 26px;border:1.5px solid var(--soft);border-radius:22px;background:var(--bg);transition:transform .2s,box-shadow .2s}
+.row:hover{transform:translateY(-4px);box-shadow:0 18px 36px rgba(19,18,54,.14)}
+.row svg{display:block;width:100%;height:auto;aspect-ratio:5/4;border-radius:16px}
+.row>div{padding:0 10px;min-width:0}
+.row h3{font-family:var(--display);font-weight:900;font-style:italic;font-size:28px;letter-spacing:-.04em;line-height:1.05}
+.row p{margin-top:8px;color:var(--muted);font-size:16px}
+.row .tag{display:inline-block;margin-top:14px;font-family:var(--mono);font-weight:700;font-size:13px;letter-spacing:.06em;color:var(--accent)}
+@media(max-width:960px){.rows{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.rows{grid-template-columns:minmax(0,1fr)}}
+@media(prefers-reduced-motion:reduce){.row:hover{transform:none}}
+
+/* Empresas */
+.biz{background:var(--panel);margin:0 calc(-1 * max(16px,env(safe-area-inset-left,0px))) 0 calc(-1 * max(16px,env(safe-area-inset-right,0px)));padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.biz-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:48px;align-items:start}
+@media(max-width:900px){.biz-grid{grid-template-columns:minmax(0,1fr)}}
+.calc{background:var(--bg);border:2px solid var(--line);border-radius:20px;padding:28px}
+.calc h3{font-family:var(--display);font-weight:900;font-style:italic;font-size:28px;letter-spacing:-.04em;margin-bottom:20px}
+[hidden]{display:none!important}
+.fld{display:flex;flex-direction:column;gap:6px;margin-bottom:16px}
+.fld label{font-family:var(--mono);font-weight:700;font-size:12px;letter-spacing:.14em;text-transform:uppercase}
+.fld select,.fld input{font:inherit;font-size:17px;padding:12px 14px;border-radius:12px;border:2px solid var(--line);background:var(--bg);color:var(--fg);width:100%;min-height:50px}
+.out{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:22px 0 8px;border-top:2px solid var(--line);padding-top:20px}
+.out div{min-width:0}
+.out small{display:block;font-family:var(--mono);font-weight:700;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.out strong{display:block;font-family:var(--display);font-weight:900;font-style:italic;font-size:clamp(24px,3.4vw,34px);letter-spacing:-.04em;line-height:1.1;font-variant-numeric:tabular-nums}
+.note{font-size:14px;color:var(--muted);margin-top:6px}
+.calc .btn{margin-top:18px;width:100%}
+.scale{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+.scale th,.scale td{text-align:left;padding:14px 0;border-bottom:1px solid var(--line);font-size:17px}
+.scale th{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;border-bottom:2px solid var(--line)}
+.scale td:last-child,.scale th:last-child{text-align:right}
+.scale td:last-child{font-weight:600;color:var(--accent)}
+.kits{margin-top:34px;display:flex;flex-direction:column}
+.kits h3{font-family:var(--mono);font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:6px}
+.kit{padding:14px 0;border-bottom:1px solid var(--line)}
+.kit b{font-weight:600}
+.kit span{display:block;color:var(--muted);font-size:15.5px}
+
+/* Proceso */
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:20px;counter-reset:s}
+.steps li{border-top:4px solid var(--accent);padding-top:16px;counter-increment:s}
+.steps li::before{content:"Paso " counter(s);font-family:var(--mono);font-weight:700;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);display:block;margin-bottom:8px}
+.steps h3{font-family:var(--display);font-weight:900;font-style:italic;font-size:24px;letter-spacing:-.04em;line-height:1.1}
+.steps p{color:var(--muted);font-size:15.5px;margin-top:8px}
+@media(max-width:980px){.steps{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 24px}}
+@media(max-width:520px){.steps{grid-template-columns:minmax(0,1fr)}}
+
+/* Contacto */
+.cta{background:var(--cta-bg);color:var(--cta-fg);margin:0 calc(-1 * max(16px,env(safe-area-inset-left,0px))) 0 calc(-1 * max(16px,env(safe-area-inset-right,0px)));padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.cta .wrap{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:48px;align-items:end}
+.cta h2{font-size:clamp(46px,8vw,110px)}
+.cta h2 em{font-style:inherit;color:var(--copper)}
+.cta p{margin-top:22px;font-size:19px;max-width:28em;color:#E6E4FF}
+.cta .btn{background:#F4F0E7;color:#131236;margin-top:30px}
+.cta .btn.ghost{background:transparent;color:#F4F0E7;border-color:#F4F0E7;margin-left:12px}
+.contact{display:flex;flex-direction:column;gap:18px;font-size:18px}
+.contact b{display:block;font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#C9C8FA;margin-bottom:3px}
+.contact .pending{font-size:15px;color:#C9C8FA}
+@media(max-width:860px){.cta .wrap{grid-template-columns:minmax(0,1fr)}.cta .btn.ghost{margin-left:0;margin-top:12px}}
+
+footer{padding-block:34px;border-top:2px solid var(--line);display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:center;font-size:15px;color:var(--muted)}
+footer .brand span{font-size:26px}
+
+@media(prefers-reduced-motion:reduce){.beam,.spot{animation:none}html{scroll-behavior:auto}.btn:hover{transform:none}}
+
+/* Fotos de portada */
+.art img{position:absolute;display:block;border-radius:20px;object-fit:cover;box-shadow:0 28px 50px rgba(8,7,40,.45);max-width:none}
+.art .ph1{right:0;top:20px;width:66%;height:400px;transform:rotate(2.5deg)}
+.art .ph2{left:0;top:150px;width:40%;height:270px;transform:rotate(-5deg);border:6px solid #FFFFFF}
+.art .beam{left:60%;top:-80px;height:120px;z-index:2}
+.art .spot{left:calc(60% - 30px);top:10px;z-index:2}
+@media(max-width:860px){.art{height:380px}.art .ph1{height:340px}.art .ph2{height:220px;top:130px}.art .beam{height:110px;top:-70px}.art .spot{top:10px}}
+
+/* Catálogo */
+.search{position:relative;max-width:560px;margin:0 auto 22px}
+.search input{width:100%;font:inherit;font-size:17px;padding:14px 48px 14px 50px;min-height:52px;border-radius:999px;border:1.5px solid var(--soft);background:var(--bg);color:var(--fg);-webkit-appearance:none;appearance:none}
+.search input::-webkit-search-cancel-button,.search input::-webkit-search-decoration{-webkit-appearance:none;display:none}
+.search input::placeholder{color:var(--fg);opacity:.55}
+.search input:focus{outline:3px solid var(--accent);outline-offset:2px;border-color:var(--accent)}
+.search .si{position:absolute;left:18px;top:50%;transform:translateY(-50%);color:var(--accent);pointer-events:none}
+.search .sx{position:absolute;right:8px;top:50%;transform:translateY(-50%);width:36px;height:36px;border:0;border-radius:50%;background:var(--panel);color:var(--fg);font-size:20px;line-height:1;cursor:pointer;display:none}
+.search.has .sx{display:block}
+.none{grid-column:1/-1;text-align:center;padding:34px 16px;border:1.5px dashed var(--soft);border-radius:18px}
+.none b{display:block;font-size:20px;margin-bottom:6px}
+.none p{margin:0 0 16px;opacity:.8}
+.count{text-align:center;font-size:14px;opacity:.7;margin:-12px 0 22px;min-height:1em}
+.pd{padding-block:28px 72px}
+.pd .back{display:inline-flex;align-items:center;gap:8px;min-height:44px;font-weight:600;color:var(--accent);text-decoration:none;margin-bottom:14px}
+.pd .back:hover{text-decoration:underline}
+.pd-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:44px;align-items:start}
+.pd-img{aspect-ratio:1;border-radius:26px;overflow:hidden;border:1.5px solid var(--soft);background:#FFFFFF;position:sticky;top:92px}
+.pd-img img{width:100%;height:100%;object-fit:cover;display:block}
+.pd-img.cut img{object-fit:contain;padding:7%}
+.pd-txt .mono{color:var(--accent);display:block;margin-bottom:14px}
+.pd-txt h1{font-family:var(--display);font-weight:900;font-style:italic;letter-spacing:-.045em;line-height:.98;font-size:clamp(34px,5vw,58px)}
+.pd-txt .lead{margin-top:20px;font-size:19px;color:var(--muted);line-height:1.55}
+.pd-price{margin-top:24px;padding:18px 22px;border-radius:18px;background:var(--panel)}
+.pd-price small{display:block;font-family:var(--mono);font-weight:700;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:4px}
+.pd-price b{font-size:26px}
+.pd-price span{display:block;margin-top:4px;font-size:15px;color:var(--muted)}
+.pd-act{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+.pd-act .btn.alt{background:transparent;color:var(--fg);border-color:var(--soft)}
+.pd-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+.pd-tags a{font-size:14px;font-weight:600;padding:8px 14px;min-height:40px;display:inline-flex;align-items:center;border-radius:999px;border:1.5px solid var(--soft);text-decoration:none}
+.pd-tags a:hover{border-color:var(--accent);color:var(--accent)}
+.pd-rel{margin-top:64px}
+.pd-rel h2{font-size:clamp(28px,4vw,40px);margin-bottom:24px}
+@media(max-width:860px){.pd-grid{grid-template-columns:minmax(0,1fr);gap:24px}.pd-img{position:static}.pd-txt .lead{font-size:17px}.pd-act .btn{flex:1 1 100%}.pd-rel{margin-top:44px}}
+.ev{border-bottom:1.5px solid var(--soft)}
+.ev-h{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px;align-items:end;margin-bottom:28px}
+.ev-h h2{font-size:clamp(36px,4.6vw,60px);color:var(--accent)}
+.ev-h p{color:var(--muted);margin-top:12px;max-width:42em}
+.ev-h p b{color:var(--fg)}
+@media(max-width:860px){.ev-h{grid-template-columns:minmax(0,1fr);gap:16px}}
+.faq{max-width:860px;margin:0 auto}
+.faq details{border-bottom:1.5px solid var(--soft)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 0;min-height:56px;font-weight:600;font-size:19px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:28px;line-height:1;color:var(--accent);flex:none}
+.faq details[open] summary::after{content:"\2212"}
+.faq summary:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:8px}
+.faq details p{padding:0 0 22px;color:var(--muted);max-width:46em}
+.faq-cta{text-align:center;margin-top:36px}
+.fab{position:fixed;right:max(16px,env(safe-area-inset-right,0px));bottom:max(16px,env(safe-area-inset-bottom,0px));z-index:70;width:58px;height:58px;border-radius:50%;background:#11803F;color:#fff;display:grid;place-items:center;box-shadow:0 10px 26px rgba(8,7,40,.35);transition:transform .15s}
+.fab:hover{transform:scale(1.06)}
+.fab:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+@media(prefers-reduced-motion:reduce){.fab{transition:none}.fab:hover{transform:none}}
+.filters{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-bottom:34px}
+.filters button{font:inherit;font-size:15px;font-weight:600;padding:10px 18px;min-height:44px;border-radius:999px;border:1.5px solid var(--soft);background:var(--bg);color:var(--fg);cursor:pointer}
+.filters button[aria-pressed="true"]{background:var(--btn-bg);color:var(--btn-fg);border-color:var(--btn-bg)}
+.cat{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+.item{display:flex;flex-direction:column;border:1.5px solid var(--soft);border-radius:22px;padding:10px;background:var(--bg);text-decoration:none;color:inherit;transition:transform .2s,box-shadow .2s}
+.item:hover{transform:translateY(-4px);box-shadow:0 18px 36px rgba(19,18,54,.14)}
+.item .pic{aspect-ratio:1;border-radius:16px;overflow:hidden;background:#FFFFFF}
+.item .pic img{width:100%;height:100%;object-fit:cover;display:block}
+.item .pic.cut img{object-fit:contain;padding:8%}
+.item .info{display:grid;grid-template-columns:minmax(0,1fr) 38px;gap:10px;padding:16px 8px 10px;flex:1}
+.item small{display:block;font-family:var(--mono);font-weight:700;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+.item h3{font-family:var(--display);font-weight:900;font-style:italic;font-size:22px;letter-spacing:-.035em;line-height:1.08}
+.item p{margin-top:8px;color:var(--muted);font-size:14.5px;line-height:1.45}
+.item .price{margin-top:12px;font-weight:600;font-size:15.5px}
+.item .go{width:38px;height:38px;border-radius:50%;background:var(--panel);color:var(--accent);display:grid;place-items:center;align-self:start}
+@media(max-width:1080px){.cat{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:780px){.cat{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.item h3{font-size:19px}.item p{display:none}.item .info{grid-template-columns:minmax(0,1fr);padding:12px 4px 6px}.item .go{display:none}}
+@media(prefers-reduced-motion:reduce){.item:hover{transform:none}}
+
+/* Páginas */
+section[id],div[id]{scroll-margin-top:84px}
+.nav a.on{color:var(--accent);text-decoration:underline;text-underline-offset:6px;text-decoration-thickness:2px}
+.pages{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.pg{position:relative;display:block;border-radius:24px;overflow:hidden;min-height:300px;color:#F4F0E7;text-decoration:none;background:#131236}
+.pg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.55;transition:transform .4s}
+.pg:hover img{transform:scale(1.04)}
+.pg>div{position:relative;padding:32px;display:flex;flex-direction:column;justify-content:flex-end;min-height:300px;gap:8px;background:linear-gradient(transparent 30%,rgba(19,18,54,.85))}
+.pg small{color:#C9C8FA}
+.pg h3{font-size:clamp(28px,2.8vw,38px)}
+.pg .more{font-weight:600;font-size:16px}
+@media(max-width:980px){.pages{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:760px){.pages{grid-template-columns:minmax(0,1fr)}.pg,.pg>div{min-height:240px}}
+.band{background:var(--hero);color:var(--hero-fg);margin:0 calc(-1 * max(16px,env(safe-area-inset-left,0px))) 0 calc(-1 * max(16px,env(safe-area-inset-right,0px)));padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.band .wrap{padding-block:64px 56px}
+.band .mono{color:#C9C8FA;display:block;margin-bottom:18px}
+.band h1{font-size:clamp(48px,7.5vw,104px)}
+.band h1 em{font-style:inherit;color:var(--copper)}
+.band p{font-size:clamp(17px,2vw,21px);max-width:34em;margin-top:22px;color:#EEEBFF}
+.band .btn{background:#F4F0E7;color:#131236;margin-top:28px}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+.chips a{padding:10px 18px;border-radius:999px;border:1.5px solid rgba(244,240,231,.6);text-decoration:none;font-weight:600;font-size:15px}
+.chips a:hover{background:rgba(244,240,231,.12)}
+.band-split .wrap{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:40px;align-items:center}
+.band-img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:22px;box-shadow:0 28px 50px rgba(8,7,40,.45);transform:rotate(2deg)}
+@media(max-width:860px){.band-split .wrap{grid-template-columns:minmax(0,1fr)}.band-img{aspect-ratio:4/3}}
+.svc{border-bottom:1.5px solid var(--soft)}
+.svc-top{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:48px;align-items:start;margin-bottom:40px}
+.svc-top .mono{color:var(--accent);display:block;margin-bottom:16px}
+.svc-top h2{font-size:clamp(42px,5.6vw,76px);color:var(--accent)}
+.lead2{font-size:18px;margin-top:18px;max-width:30em}
+.svc-top .btn{margin-top:26px}
+.specs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:36px;margin:0}
+.specs div{border-top:5px solid var(--fg);padding:12px 0 24px;min-width:0}
+.specs dt{font-family:var(--mono);font-weight:700;font-size:12px;letter-spacing:.12em;text-transform:uppercase}
+.specs dd{margin:6px 0 0;font-weight:600;font-style:italic;font-size:18px;line-height:1.3}
+.gal{display:grid;grid-template-columns:1.34fr 1fr 1fr;gap:16px}
+.gal img{width:100%;height:300px;object-fit:cover;border-radius:16px;display:block}
+@media(max-width:860px){.svc-top{grid-template-columns:minmax(0,1fr);gap:28px}.gal{grid-template-columns:repeat(2,minmax(0,1fr))}.gal img{height:200px}.gal img:first-child{grid-column:1/-1;height:240px}}
+@media(max-width:420px){.specs{grid-template-columns:minmax(0,1fr)}}
+.moresv{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.moresv>div{border:1.5px solid var(--soft);border-radius:22px;padding:28px;display:flex;flex-direction:column;gap:10px}
+.moresv h3{font-size:34px;color:var(--accent)}
+.moresv p{color:var(--muted);flex:1}
+.moresv .btn{align-self:flex-start;margin-top:8px}
+@media(max-width:860px){.moresv{grid-template-columns:minmax(0,1fr)}}
+.cat3{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media(max-width:860px){.cat3{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.steps4{grid-template-columns:repeat(4,minmax(0,1fr))}
+@media(max-width:980px){.steps4{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:520px){.steps4{grid-template-columns:minmax(0,1fr)}}
+.band{overflow:hidden}
+.aside{margin-top:40px;font-size:17px;color:var(--muted)}
+.aside a{color:var(--accent);font-weight:600}
+/* ===== escenario de la caja + riel (versión 2) ===== */
+.morewrap{display:flex;flex-direction:column;align-items:center;gap:14px;margin-top:34px}
+.morewrap .mono{color:var(--muted);font-size:12px}
+.x-bleed{margin:0 calc(-1 * var(--gr)) 0 calc(-1 * var(--gl))}
+.x-grain{position:absolute;inset:0;z-index:45;pointer-events:none;mix-blend-mode:overlay;opacity:.07;background-repeat:repeat;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.sig{position:relative;display:inline-block;font-style:italic;font-weight:900;transform-origin:top center;white-space:nowrap}
+.sig i{position:absolute;inset:0;z-index:1;font-style:inherit;color:var(--copper);-webkit-text-stroke:.2em var(--copper);pointer-events:none;user-select:none}
+.sig b{position:relative;z-index:2;font-weight:inherit;color:#131236}
+.sig.go{animation:xflip .7s cubic-bezier(.22,1,.36,1) both}
+@keyframes xflip{0%{transform:perspective(600px) rotateX(-110deg) scale(.7,.15);opacity:0}20%{transform:perspective(600px) rotateX(-70deg) scale(.85,.4);opacity:.4}55%{transform:perspective(600px) rotateX(-20deg) scale(.95,.8);opacity:.85}75%{transform:perspective(600px) rotateX(5deg) scale(1.02,1.04);opacity:1}88%{transform:perspective(600px) rotateX(-2deg) scale(1,.98)}100%{transform:none;opacity:1}}
+.rise.go{animation:xrise .8s ease-out both}
+@keyframes xrise{from{opacity:0;filter:blur(12px);transform:translateY(20px)}to{opacity:1;filter:none;transform:none}}
+#caja{position:relative;height:400vh}
+.x-stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;background:radial-gradient(ellipse 80% 62% at 50% 60%,#3532C4 0%,#2A28A0 30%,#1B1A5C 58%,#131236 82%)}
+.x-stage::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 34% 20% at 50% 74%,rgba(217,112,43,.20),transparent 70%);pointer-events:none}
+.x-head{position:absolute;top:104px;left:0;right:0;z-index:20;text-align:center;padding:0 var(--gr) 0 var(--gl);will-change:opacity}
+.x-head .mono{color:#C9C8FA;display:inline-flex;align-items:center;gap:12px;margin-bottom:18px;font-size:12px}
+.x-head .mono::before{content:"";width:34px;height:3px;background:var(--copper)}
+.x-head h1{font-family:var(--display);font-style:italic;font-weight:900;font-size:clamp(40px,6.6vw,84px);line-height:1;letter-spacing:-.045em;color:#F4F0E7}
+.x-head h1 .sig{margin:0 .1em}
+.x-head p{max-width:420px;margin:20px auto 0;font-size:15px;line-height:1.6;color:#C9C8FA}
+.x-layer{position:absolute;left:50%;top:60%;width:460px;height:344px;margin:-172px 0 0 -230px;will-change:transform,opacity;pointer-events:none}
+.x-layer svg{width:100%;height:100%;overflow:visible;display:block}
+#bBack{z-index:1}#bFront{z-index:3}#bLid{z-index:8}
+#xitems{position:absolute;left:50%;top:60%;width:0;height:0;z-index:2}
+.x-it{position:absolute;display:block;text-decoration:none;will-change:transform;pointer-events:none}
+.x-it.x-out{pointer-events:auto}
+.x-it img{width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 14px 22px rgba(8,7,40,.55))}
+.x-it.x-out:hover img{animation:xwig .5s ease-in-out}
+@keyframes xwig{0%,100%{transform:rotate(0)}20%{transform:rotate(-3deg)}40%{transform:rotate(3deg)}60%{transform:rotate(-2deg)}80%{transform:rotate(2deg)}}
+.x-cap{position:absolute;left:50%;top:calc(100% + 4px);transform:translate(-50%,8px);width:max-content;max-width:210px;text-align:center;opacity:0;transition:opacity .5s ease-out,transform .5s ease-out;pointer-events:none}
+.x-it.x-out .x-cap{opacity:1;transform:translate(-50%,0)}
+.x-cap b{display:block;font-weight:600;font-size:17px;line-height:1.2;color:#F4F0E7}
+.x-cap span{display:block;margin-top:4px;font-family:var(--mono);font-weight:700;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#C9C8FA}
+.x-cue{position:absolute;left:var(--gl);bottom:26px;z-index:20;display:flex;flex-direction:row-reverse;align-items:center;gap:12px;color:#C9C8FA;will-change:opacity}
+.x-cue .mono{font-size:12px}
+.x-cue i{width:3px;height:30px;border-radius:2px;background:linear-gradient(var(--copper),transparent);animation:xdrop 1.6s ease-in-out infinite}
+@keyframes xdrop{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+#galeria{position:relative;background:#131236}
+.x-gpin{position:relative;overflow:hidden}
+.x-gpin::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 60% 70% at 72% 45%,rgba(47,44,180,.55),transparent 70%);pointer-events:none}
+.x-ghead{position:relative;z-index:10;padding:72px var(--gr) 0 var(--gl)}
+.x-ghead h2{font-family:var(--display);font-style:italic;font-weight:900;font-size:clamp(34px,4.4vw,56px);line-height:1.02;letter-spacing:-.045em}
+.x-ghead h2 .sig{margin-left:.1em}
+.x-ghead p{margin-top:14px;max-width:340px;font-size:15px;line-height:1.6;color:#C9C8FA}
+.x-track{position:relative;z-index:5;display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:36px var(--gr) 72px var(--gl);scroll-padding-left:var(--gl)}
+.x-track::-webkit-scrollbar{display:none}
+.x-card{position:relative;flex:none;width:72vw;max-width:340px;aspect-ratio:3/4;overflow:hidden;border-radius:22px;background:#1B1A47;scroll-snap-align:start;text-decoration:none;display:block}
+.x-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .7s ease-out}
+.x-card:hover img{transform:scale(1.05)}
+.x-card::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(19,18,54,.94) 0%,rgba(19,18,54,.5) 26%,rgba(19,18,54,0) 52%);pointer-events:none}
+.x-card div{position:absolute;left:0;right:0;bottom:0;z-index:2;display:flex;align-items:flex-end;justify-content:space-between;gap:12px;padding:18px 20px}
+.x-card b{font-weight:600;font-size:19px;line-height:1.15;color:#F4F0E7}
+.x-card span{flex:none;font-family:var(--mono);font-weight:700;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--copper);text-align:right}
+@media(min-width:769px){
+  .pin .x-gpin{position:sticky;top:0;height:100vh;height:100svh}
+  .pin .x-ghead{position:absolute;top:104px;left:24px;padding:0}
+  .pin .x-track{height:100%;width:max-content;overflow:visible;scroll-snap-type:none;align-items:center;padding:190px 40px 0 max(40px,var(--gl));will-change:transform}
+  .pin .x-card{width:30vw;max-width:340px}
+}
+@media(min-width:1024px){.pin .x-card{width:22vw}}
+@media(max-width:820px){#caja{height:240vh}.x-head{top:148px}.x-head p{font-size:14px;max-width:320px}.x-cue{display:none}.x-layer,#xitems{top:64%}}
+@media(prefers-reduced-motion:reduce){.sig.go,.rise.go,.x-cue i,.x-it.x-out:hover img{animation:none}}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#inicio" aria-label="Graby, inicio">
+      <svg width="34" height="34" viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M30.72 11 A14 14 0 1 0 33.95 21.22 L34 20 L21.4 20" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="33.3" cy="15.7" r="2.2" fill="#D9702B"/></svg>
+      <span>Graby</span>
+    </a>
+    <nav class="nav" aria-label="Secciones">
+      <a href="#inicio">Inicio</a>
+      <a href="#rubros">Catálogo</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#carteleria">Cartelería</a>
+      <a href="#eventos">Eventos</a>
+      <a href="#empresas">Empresas</a>
+      <a href="#pedir">Cómo pedir</a>
+    </nav>
+    <a class="btn wa" href="#contacto">Pedí presupuesto</a>
+  </div>
+</header>
+
+<main id="inicio">
+<div data-view="home">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <g id="g"><path d="M30.72 11 A14 14 0 1 0 33.95 21.22 L34 20 L21.4 20" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="33.3" cy="15.7" r="2.2" fill="#D9702B"/></g>
+  <linearGradient id="gb" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F4F0E7"/><stop offset="1" stop-color="#DCD7CB"/></linearGradient>
+  <linearGradient id="gi" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8A88D8"/><stop offset="1" stop-color="#4A48A8"/></linearGradient>
+  <linearGradient id="gl" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1D1C52"/><stop offset="1" stop-color="#0E0D2C"/></linearGradient>
+</defs></svg>
+<section id="caja" class="x-bleed" aria-label="Regalos personalizados">
+ <div class="x-stage">
+  <div class="x-grain"></div>
+  <div class="x-head" id="xhead">
+   <span class="mono">Regalos empresariales · Eventos</span>
+   <h1 class="rise">Tu marca <span class="sig" data-delay=".5"><i aria-hidden="true">siempre</i><b>siempre</b></span><br>presente.</h1>
+   <p id="xlead">Seis productos que personalizamos en el taller de Coronel Du Graty. Bajá para abrir la caja.</p>
+  </div>
+  <div class="x-layer" id="bBack" aria-hidden="true"><svg viewBox="0 0 460 344"><path d="M60 152 L400 152 L384 108 L76 108 Z" fill="url(#gi)"/><path d="M60 152 L400 152 L396 141 L64 141 Z" fill="#131236" opacity=".35"/></svg></div>
+  <div id="xitems"></div>
+  <div class="x-layer" id="bFront" aria-hidden="true"><svg viewBox="0 0 460 344"><ellipse cx="230" cy="334" rx="196" ry="11" fill="#07062A" opacity=".5"/><rect x="60" y="150" width="340" height="182" rx="7" fill="url(#gb)"/><rect x="60" y="150" width="340" height="9" fill="#131236" opacity=".12"/><g transform="translate(170 181) scale(3)" color="#2F2CB4"><use href="#g"/></g></svg></div>
+  <div class="x-layer" id="bLid" aria-hidden="true"><svg viewBox="0 0 460 344"><path d="M46 98 L414 98 L390 64 L70 64 Z" fill="#2A2970"/><rect x="46" y="96" width="368" height="66" rx="6" fill="url(#gl)"/><rect x="46" y="96" width="368" height="3" fill="#9C9AF4" opacity=".55"/><rect x="200" y="96" width="60" height="66" fill="#D9702B"/><path d="M200 64 L260 64 L260 98 L200 98 Z" fill="#C2611F"/></svg></div>
+  <div class="x-cue" id="xcue"><span class="mono">Bajá para abrir</span><i></i></div>
+ </div>
+</section>
+
+<section id="galeria" class="x-bleed" aria-label="Productos destacados">
+ <div class="x-gpin">
+  <div class="x-grain"></div>
+  <div class="x-ghead">
+   <h2 class="rise">Todo esto, <span class="sig" data-delay=".2"><i aria-hidden="true">con tu logo</i><b>con tu logo</b></span></h2>
+   <p>Tocá un producto para ver la ficha, el precio y productos parecidos.</p>
+  </div>
+  <div class="x-track" id="xtrack"></div>
+ </div>
+</section>
+
+<div class="trust wrap">
+  <div class="t"><span class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F4F0E7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7l9-4 9 4-9 4-9-4z"/><path d="M3 7v10l9 4 9-4V7"/><path d="M12 11v10"/></svg></span><div><b>Desde 10 unidades</b><span>Con descuento por cantidad</span></div></div>
+  <div class="t"><span class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F4F0E7" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><div><b>Cotización en el día</b><span>Precio y fecha antes de pagar</span></div></div>
+  <div class="t"><span class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F4F0E7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span><div><b>Taller propio</b><span>Todo se hace en Coronel Du Graty</span></div></div>
+</div>
+
+<section id="rubros" class="wrap">
+  <div class="sec-h center">
+    <span class="mono"><i class="rule"></i>Catálogo</span>
+    <h2 class="display">Lo que hacemos en el taller.</h2>
+    <p>Productos con el logo de cada cliente. Tocá uno y nos escribís por WhatsApp con la consulta ya armada.</p>
+  </div>
+  <div class="search" id="searchbox" role="search">
+    <svg class="si" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+    <input id="q" type="search" placeholder="Buscá: termo, sello, llavero, cartel…" aria-label="Buscar en el catálogo" autocomplete="off" enterkeyhint="search">
+    <button class="sx" id="qx" type="button" aria-label="Borrar búsqueda">×</button>
+  </div>
+  <div class="count" id="count" aria-live="polite"></div>
+  <div class="filters" role="group" aria-label="Filtrar el catálogo" id="filters"></div>
+  <div class="cat" id="cat"></div>
+  <div class="morewrap" id="morewrap" hidden><button class="btn" id="more" type="button">Ver más productos</button><span id="moreinfo" class="mono"></span></div>
+</section>
+
+<section class="wrap">
+  <div class="pages">
+    <a class="pg" href="#servicios"><img src="img/svc_laser.jpg" alt="Láser grabando un mandala sobre madera" loading="lazy"><div><small class="mono">Servicios</small><h3 class="display">Grabado láser, 3D y souvenirs</h3><span class="more">Ver servicios</span></div></a>
+    <a class="pg" href="#eventos"><img src="img/centro_mesa.jpg" alt="Centro de mesa de acrílico espejado con nombre y año" loading="lazy"><div><small class="mono">Eventos</small><h3 class="display">Souvenirs y regalos para tu evento</h3><span class="more">Ver eventos</span></div></a>
+    <a class="pg" href="#carteleria"><img src="img/cart_led.jpg" alt="Letras corpóreas con luz LED de fondo sobre pared de ladrillo" loading="lazy"><div><small class="mono">Cartelería</small><h3 class="display">Carteles para tu local</h3><span class="more">Ver cartelería</span></div></a>
+  </div>
+</section>
+
+<div class="biz" id="empresas">
+<section class="wrap">
+  <div class="sec-h">
+    <span class="mono"><i class="rule"></i>Empresas, eventos y clubes</span>
+    <h2 class="display">Cuanto más pedís, menos pagás por pieza.</h2>
+    <p>Armá una cuenta rápida con precios de lista de octubre 2026. El valor final lo confirmamos en el día, con tu logo a la vista.</p>
+  </div>
+  <div class="biz-grid">
+    <form class="calc" id="calc" onsubmit="return false">
+      <h3>Calculá tu pedido</h3>
+      <div class="fld"><label for="prod">Producto</label>
+        <select id="prod"></select></div>
+      <div id="stk" hidden>
+        <div class="fld"><label for="stsz">Medida (cm)</label><select id="stsz"></select></div>
+        <div class="fld"><label for="stfin">Terminación</label>
+          <select id="stfin"><option value="lam">Laminado</option><option value="sin">Sin laminar</option></select></div>
+        <div class="fld"><label for="stcut">Recorte</label>
+          <select id="stcut"><option value="0">Sin recortar (en plancha)</option><option value="1">Recortados</option></select></div>
+      </div>
+      <div class="fld" id="qtyw"><label for="qty">Cantidad</label>
+        <input id="qty" type="number" inputmode="numeric" min="1" max="5000" value="50"></div>
+      <div class="out" aria-live="polite">
+        <div><small>Por unidad</small><strong id="unit">-</strong></div>
+        <div><small id="disclbl">Descuento</small><strong id="disc">-</strong></div>
+        <div><small>Total</small><strong id="tot">-</strong></div>
+      </div>
+      <p class="note" id="hint"></p>
+      <a class="btn wa" id="send" href="#contacto">Pedir este presupuesto</a>
+      <p class="note">Precios de referencia en pesos argentinos. Pueden variar con el diseño, el material y la fecha.</p>
+    </form>
+    <div>
+      <table class="scale">
+        <caption class="note" style="text-align:left;caption-side:top;margin:0 0 8px">Descuento por cantidad en llaveros</caption><thead><tr><th>Cantidad</th><th>Descuento</th></tr></thead>
+        <tbody>
+          <tr><td>1 a 9 unidades</td><td>Precio de lista</td></tr>
+          <tr><td>10 a 49 unidades</td><td>10 %</td></tr>
+          <tr><td>50 a 99 unidades</td><td>18 %</td></tr>
+          <tr><td>100 o más</td><td>20 %</td></tr>
+        </tbody>
+      </table>
+      <div class="kits">
+        <h3>Kits armados</h3>
+        <div class="kit"><b>Kit Profesional</b><span>Placa negra 30x20, sello de bolsillo y placa de escritorio.</span></div>
+        <div class="kit"><b>Kit Consultorio Premium</b><span>Placa espejada, dos carteles de puerta y sello 47x18.</span></div>
+        <div class="kit"><b>Kit Emprendedor</b><span>Sello manual 5x5, almohadilla y sello 47x18.</span></div>
+        <div class="kit"><b>Kit Mostrador</b><span>Soporte QR con NFC y sello redondo.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+
+<section id="proceso" class="wrap">
+  <div class="sec-h center">
+    <span class="mono"><i class="rule"></i>Cómo trabajamos</span>
+    <h2 class="display">De tu logo al pedido en mano.</h2>
+    <p>Cinco pasos, siempre en este orden, para que sepas qué viene después.</p>
+  </div>
+  <ol class="steps">
+    <li><h3>Mandanos tu logo</h3><p>Por WhatsApp, en el formato que lo tengas. Si no tenés archivo, lo rearmamos.</p></li>
+    <li><h3>Cotizamos en el día</h3><p>Te pasamos precio y fecha de entrega antes de que pagues.</p></li>
+    <li><h3>Prueba de grabado</h3><p>Antes de una tirada grande, grabamos una pieza para que apruebes el resultado.</p></li>
+    <li><h3>Producción</h3><p>Hacemos todas las piezas en el taller, con control una por una.</p></li>
+    <li><h3>Entrega</h3><p>Retiro en el taller o envío coordinado, en la fecha acordada.</p></li>
+  </ol>
+</section>
+
+</div>
+
+<div data-view="servicios" hidden>
+<div class="band">
+  <div class="wrap">
+    <span class="mono"><i class="rule"></i>Servicios</span>
+    <h1 class="display">Lo hacemos en el taller<em>.</em></h1>
+    <p>Grabamos, cortamos e imprimimos en Coronel Du Graty. Traé tu archivo o lo diseñamos con vos, desde una pieza hasta pedidos por mayor.</p>
+    <div class="chips"><a href="#svc-laser">Grabado láser</a><a href="#svc-3d">Impresión 3D</a><a href="#svc-mdf">Cajas y souvenirs</a><a href="#svc-mas">Sellos, imprenta y textil</a></div>
+  </div>
+</div>
+<section class="svc wrap" id="svc-laser">
+  <div class="svc-top">
+    <div><span class="mono"><i class="rule"></i>Servicios · Grabado láser</span><h2 class="display">Grabado láser.</h2><p class="lead2">Personalizamos con tu logo, nombre o diseño sobre madera, MDF, acrílico, cuero y más. Para empresas, eventos y regalos.</p><a class="btn" data-wa="Hola Graby, quiero presupuesto de grabado láser." href="#contacto">Pedí tu presupuesto</a></div>
+    <dl class="specs"><div><dt>Materiales</dt><dd>MDF, madera y bambú</dd></div><div><dt>Archivos aceptados</dt><dd>SVG · AI · DXF · CDR · PDF</dd></div><div><dt>Acrílico y cuero</dt><dd>llaveros, placas y carteles</dd></div><div><dt>¿Sin archivo?</dt><dd>realizamos el diseño por vos</dd></div><div><dt>Cantidad</dt><dd>desde 1 pieza o por mayor</dd></div><div><dt>Aplicaciones</dt><dd>regalos empresariales, souvenirs y cartelería</dd></div></dl>
+  </div>
+  <div class="gal"><img src="img/svc_laser.jpg" alt="Cabezal láser grabando un mandala en madera" loading="lazy"><img src="img/svc_madera.jpg" alt="Placa redonda de madera con corona de flores grabada" loading="lazy"><img src="img/svc_llaveros.jpg" alt="Llavero de cuero y llavero de acrílico con montañas grabadas" loading="lazy"></div>
+</section>
+<section class="svc wrap" id="svc-3d">
+  <div class="svc-top">
+    <div><span class="mono"><i class="rule"></i>Servicios · Impresión 3D</span><h2 class="display">Impresión 3D a medida.</h2><p class="lead2">Llaveros, soportes, piezas funcionales y prototipos. Imprimimos tu modelo o lo diseñamos con vos, en los colores que elijas.</p><a class="btn" data-wa="Hola Graby, quiero presupuesto de impresión 3D." href="#contacto">Pedí tu presupuesto</a></div>
+    <dl class="specs"><div><dt>Llaveros</dt><dd>con tu nombre, logo o forma</dd></div><div><dt>Archivos aceptados</dt><dd>STL · 3MF · OBJ</dd></div><div><dt>Piezas funcionales</dt><dd>soportes, organizadores, repuestos</dd></div><div><dt>¿Sin modelo?</dt><dd>lo modelamos por vos</dd></div><div><dt>Prototipos</dt><dd>probá tu idea antes de producir</dd></div><div><dt>Aplicaciones</dt><dd>souvenirs, merchandising y regalos empresariales</dd></div></dl>
+  </div>
+  <div class="gal"><img src="img/svc_3d.jpg" alt="Impresora 3D imprimiendo una figura naranja" loading="lazy"><img src="img/svc_3d_llaveros.jpg" alt="Tres llaveros 3D redondos con la letra A en distintos colores" loading="lazy"><img src="img/svc_3d_nails.jpg" alt="Llaveros 3D rosas con forma de esmalte de uñas" loading="lazy"></div>
+</section>
+<section class="svc wrap" id="svc-mdf">
+  <div class="svc-top">
+    <div><span class="mono"><i class="rule"></i>Eventos · Cajas y souvenirs</span><h2 class="display">Cajas y souvenirs de MDF.</h2><p class="lead2">Cajas, maceteros, placas y recuerdos de MDF cortados y grabados a láser. Para cumpleaños, bautismos, casamientos y eventos de empresa.</p><a class="btn" data-wa="Hola Graby, quiero presupuesto de cajas y souvenirs de MDF." href="#contacto">Pedí tu presupuesto</a></div>
+    <dl class="specs"><div><dt>Cajas y maceteros</dt><dd>armables, con tapa o con grabado</dd></div><div><dt>Eventos</dt><dd>bautismo, comunión, cumple y boda</dd></div><div><dt>Recuerdos</dt><dd>placas, corazones y mini cuadros</dd></div><div><dt>Acabados</dt><dd>MDF natural, blanco o combinado</dd></div><div><dt>Personalización</dt><dd>nombre, fecha, frase o logo</dd></div><div><dt>Mayorista</dt><dd>precio especial por cantidad</dd></div></dl>
+  </div>
+  <div class="gal"><img src="img/mdf_corazon.jpg" alt="Souvenirs de MDF con forma de corazón y suculentas" loading="lazy"><img src="img/mdf_comunion.jpg" alt="Placa blanca de comunión con paloma y cáliz grabados" loading="lazy"><img src="img/mdf_maceteros.jpg" alt="Maceteros de MDF con cactus grabados" loading="lazy"></div>
+</section>
+<section class="svc wrap" id="svc-mas">
+  <div class="sec-h"><span class="mono"><i class="rule"></i>Más servicios</span><h2 class="display">Sellos, imprenta y textil.</h2><p>Mirá los productos de cada rubro en el catálogo.</p></div>
+  <div class="moresv">
+    <div><h3 class="display">Sellos</h3><p>Automáticos, de goma con mango de madera, grandes para cajas y para comida.</p><a class="btn ghost" data-cat="Sellos" href="#rubros">Ver sellos</a></div>
+    <div><h3 class="display">Imprenta</h3><p>Stickers, tarjetas, carpetas, recetarios, anotadores, entradas y pulseras.</p><a class="btn ghost" data-cat="Imprenta" href="#rubros">Ver imprenta</a></div>
+    <div><h3 class="display">Textil</h3><p>Remeras, chombas, gorras y bolsas de friselina con tu marca.</p><a class="btn ghost" data-cat="Textil" href="#rubros">Ver textil</a></div>
+  </div>
+</section>
+</div>
+
+<div data-view="carteleria" hidden>
+<div class="band band-split">
+  <div class="wrap">
+    <div>
+      <span class="mono"><i class="rule"></i>Cartelería · Corpóreos</span>
+      <h1 class="display">Que tu local se vea desde la calle<em>.</em></h1>
+      <p>Letras corpóreas, carteles con luz, neón y logos para fachadas e interiores. Lo colocamos nosotros, en tu local.</p>
+      <a class="btn" data-wa="Hola Graby, quiero presupuesto de un cartel para mi local." href="#contacto">Pedí tu presupuesto</a>
+    </div>
+    <img class="band-img" src="img/cart_led.jpg" alt="Letras corpóreas con luz LED de fondo sobre pared de ladrillo">
+  </div>
+</div>
+<section class="wrap">
+  <div class="sec-h center"><span class="mono"><i class="rule"></i>Tipos de cartel</span><h2 class="display">Elegí el que va con tu local.</h2><p>Tocá uno y nos escribís por WhatsApp con la consulta armada.</p></div>
+  <div class="cat cat3">
+<a class="item" data-wa="Hola Graby, quiero presupuesto de: Letras corpóreas con LED." href="#contacto"><div class="pic"><img src="img/cart_led.jpg" alt="Letras corpóreas iluminadas desde atrás" loading="lazy"></div><div class="info"><div><h3>Letras corpóreas con LED</h3><p>En polifán o PETG 3D, con luz de frente o de fondo.</p></div><span class="go"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a><a class="item" data-wa="Hola Graby, quiero presupuesto de: Letras para fachada." href="#contacto"><div class="pic"><img src="img/cart_fachada.jpg" alt="Logo corpóreo blanco en la fachada de un centro médico" loading="lazy"></div><div class="info"><div><h3>Letras para fachada</h3><p>En relieve, para el frente de locales, consultorios y oficinas.</p></div><span class="go"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a><a class="item" data-wa="Hola Graby, quiero presupuesto de: Cartel bandera." href="#contacto"><div class="pic"><img src="img/cart_bandera.jpg" alt="Cartel tipo bandera de un estudio de abogacía" loading="lazy"></div><div class="info"><div><h3>Cartel bandera</h3><p>Perpendicular a la pared, para que te vean desde la vereda.</p></div><span class="go"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a><a class="item" data-wa="Hola Graby, quiero presupuesto de: Logo en acrílico para pared." href="#contacto"><div class="pic"><img src="img/cart_logo.jpg" alt="Logo en acrílico dorado espejado sobre placa circular" loading="lazy"></div><div class="info"><div><h3>Logo en acrílico para pared</h3><p>Acrílico espejado dorado o plateado, para recepciones y consultorios.</p></div><span class="go"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a><a class="item" data-wa="Hola Graby, quiero presupuesto de: Cartel de neón LED." href="#contacto"><div class="pic"><img src="img/neon.jpg" alt="Cartel de neón con la frase Confiando en el proceso" loading="lazy"></div><div class="info"><div><h3>Cartel de neón LED</h3><p>Letras y logos sobre base de MDF, para interior, con encastres fáciles de instalar.</p></div><span class="go"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a><a class="item" data-wa="Hola Graby, quiero presupuesto de: Letras con luz interior." href="#contacto"><div class="pic"><img src="img/cart_letra.jpg" alt="Letra corpórea blanca con cables de LED" loading="lazy"></div><div class="info"><div><h3>Letras con luz interior</h3><p>Letras huecas con LED adentro, para que tu marca se vea de noche.</p></div><span class="go"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a>
+  </div>
+</section>
+<section class="wrap">
+  <div class="sec-h center"><span class="mono"><i class="rule"></i>Cómo trabajamos</span><h2 class="display">Del frente de tu local al cartel puesto.</h2></div>
+  <ol class="steps steps4">
+    <li><h3>Mandanos una foto</h3><p>Del frente o la pared, con las medidas aproximadas.</p></li>
+    <li><h3>Te pasamos la propuesta</h3><p>Diseño, materiales y presupuesto, antes de empezar.</p></li>
+    <li><h3>Fabricamos en el taller</h3><p>Corte, armado y luces, todo en Coronel Du Graty.</p></li>
+    <li><h3>Lo colocamos</h3><p>Lo instalamos nosotros en tu local.</p></li>
+  </ol>
+  <p class="aside">¿Buscás carteles chicos para el mostrador, como QR para cartas o reseñas de Google? <a href="#rubros" data-cat="Comercios">Miralos en el catálogo</a>.</p>
+</section>
+</div>
+
+<div data-view="eventos" hidden>
+<div class="band band-split">
+  <div class="wrap">
+    <div>
+      <span class="mono"><i class="rule"></i>Eventos · Souvenirs</span>
+      <h1 class="display">Un recuerdo para cada invitado<em>.</em></h1>
+      <p>Souvenirs, regalos y premios con nombre, fecha o logo. Para egresados, cumpleaños, casamientos, torneos y fiestas de empresa.</p>
+      <a class="btn" data-wa="Hola Graby, tengo un evento y quiero consultar. Tipo de evento: ... Fecha: ... Cantidad aproximada: ..." href="#contacto">Consultá por tu fecha</a>
+    </div>
+    <img class="band-img" src="img/centro_mesa.jpg" alt="Centro de mesa de acrílico espejado con nombre y año">
+  </div>
+</div>
+<section class="wrap ev">
+  <div class="ev-h">
+    <div><h2 class="display">Egresados</h2><p>Centros de mesa, vasos, pulseras de acceso y entradas, todo con el nombre de la promo y el año.</p><p><b>Combinación sugerida:</b> centro de mesa + vasos de 750 ml + pulseras para el ingreso.</p></div>
+    <a class="btn" data-wa="Hola Graby, quiero consultar por productos para un egreso: centros de mesa, vasos y pulseras. Fecha: ... Cantidad: ..." href="#contacto">Consultar para egresados</a>
+  </div>
+  <div class="cat evgrid" data-ids="centro_mesa,vasos750,pulseras,ticket"></div>
+</section>
+<section class="wrap ev">
+  <div class="ev-h">
+    <div><h2 class="display">Cumpleaños, casamientos y bautismos</h2><p>Recuerdos chicos y lindos para cada invitado, con nombre y fecha.</p><p><b>Combinación sugerida:</b> souvenir de MDF + mate copita o llavero grabado con el nombre del festejo.</p></div>
+    <a class="btn" data-wa="Hola Graby, quiero consultar por souvenirs para un festejo. Tipo: ... Fecha: ... Cantidad de invitados: ..." href="#contacto">Consultar souvenirs</a>
+  </div>
+  <div class="cat evgrid" data-ids="mdf_corazon,mate_copita,llavero_acrilico,mates_acero"></div>
+</section>
+<section class="wrap ev">
+  <div class="ev-h">
+    <div><h2 class="display">Peñas, clubes y torneos</h2><p>Premios, vasos y ropa del equipo para que el evento se recuerde.</p><p><b>Combinación sugerida:</b> trofeos + vasos fernetero + remeras o gorras del equipo.</p></div>
+    <a class="btn" data-wa="Hola Graby, quiero consultar por productos para un club o torneo: trofeos, vasos y ropa. Fecha: ... Cantidad: ..." href="#contacto">Consultar para clubes</a>
+  </div>
+  <div class="cat evgrid" data-ids="trofeo,vaso_evento,remeras,gorras"></div>
+</section>
+<section class="wrap ev">
+  <div class="ev-h">
+    <div><h2 class="display">Fiestas y aniversarios de empresa</h2><p>Regalos para clientes y equipo, con tu logo y por cantidad.</p><p><b>Combinación sugerida:</b> termo + mate + birome grabados, en bolsa con tu diseño.</p></div>
+    <a class="btn" data-wa="Hola Graby, quiero consultar por regalos para una fiesta o aniversario de empresa. Fecha: ... Cantidad: ..." href="#contacto">Consultar para empresas</a>
+  </div>
+  <div class="cat evgrid" data-ids="termo,mates_acero,birome,bolsas"></div>
+</section>
+<section class="wrap">
+  <div class="sec-h center"><span class="mono"><i class="rule"></i>Cómo lo resolvemos</span><h2 class="display">De la idea al evento.</h2></div>
+  <ol class="steps steps4">
+    <li><h3>Contanos del evento</h3><p>Qué festejás, la fecha y cuántos invitados.</p></li>
+    <li><h3>Elegís qué llevar</h3><p>Tocá los productos y sumá tu nombre, logo o frase.</p></li>
+    <li><h3>Te pasamos precio y fecha</h3><p>Con descuento por cantidad, antes de que pagues.</p></li>
+    <li><h3>Lo preparamos</h3><p>Grabamos e imprimimos todo en el taller de Coronel Du Graty.</p></li>
+  </ol>
+  <p class="aside">¿Ya sabés qué necesitás? <a href="#empresas">Calculá tu pedido por cantidad</a>.</p>
+</section>
+</div>
+
+<div data-view="pedir" hidden>
+<div class="band">
+  <div class="wrap">
+    <span class="mono"><i class="rule"></i>Cómo pedir</span>
+    <h1 class="display">Así pedís en Graby<em>.</em></h1>
+    <p>Todo se resuelve por WhatsApp. Contanos qué necesitás y te respondemos con precio y fecha en el día.</p>
+    <a class="btn" data-wa="Hola Graby, quiero hacer un pedido." href="#contacto">Escribinos por WhatsApp</a>
+  </div>
+</div>
+<section class="wrap">
+  <div class="sec-h center"><span class="mono"><i class="rule"></i>Paso a paso</span><h2 class="display">Cuatro pasos y listo.</h2></div>
+  <ol class="steps steps4">
+    <li><h3>Contanos qué necesitás</h3><p>Producto, cantidad y, si es para un evento, la fecha.</p></li>
+    <li><h3>Mandanos tu logo</h3><p>En el formato que lo tengas. Si no tenés archivo, lo rearmamos.</p></li>
+    <li><h3>Recibís precio y fecha</h3><p>En el día y antes de pagar, con descuento por cantidad.</p></li>
+    <li><h3>Lo preparamos</h3><p>Producimos en el taller y coordinamos cómo lo recibís.</p></li>
+  </ol>
+</section>
+<section class="wrap">
+  <div class="sec-h center"><span class="mono"><i class="rule"></i>Preguntas frecuentes</span><h2 class="display">Lo que más nos preguntan.</h2></div>
+  <div class="faq">
+    <details><summary>¿Qué archivo tengo que mandar?</summary><p>Para grabado láser aceptamos SVG, AI, DXF, CDR y PDF. Para impresión 3D, STL, 3MF y OBJ. Si solo tenés una foto del logo o no tenés archivo, lo rearmamos nosotros.</p></details>
+    <details><summary>¿Desde cuántas unidades hay precio por mayor?</summary><p>El descuento empieza en 10 unidades: 10 % de 10 a 49, 18 % de 50 a 99 y 20 % desde 100. Podés hacer la cuenta en <a href="#empresas">Calculá tu pedido</a>.</p></details>
+    <details><summary>¿Cuánto tarda mi pedido?</summary><p>Depende del producto y de la cantidad. Te confirmamos la fecha junto con el precio, antes de que pagues.</p></details>
+    <details><summary>¿Puedo ver cómo queda antes de producir?</summary><p>En las placas recordatorias te mostramos la prueba antes. Para otros productos, consultanos y lo vemos según el caso.</p></details>
+    <details><summary>¿Cómo se paga?</summary><p>Lo coordinamos por WhatsApp cuando aprobás el presupuesto.</p></details>
+    <details><summary>¿Hacen envíos?</summary><p>Contanos tu localidad y coordinamos cómo recibir tu pedido.</p></details>
+    <details><summary>¿Hacen carteles con colocación?</summary><p>Sí. En cartelería fabricamos y lo colocamos nosotros en tu local. Mirá <a href="#carteleria">Cartelería</a>.</p></details>
+    <details><summary>¿Dónde están?</summary><p>El taller está en Coronel Du Graty, Chaco. Nos escribís por WhatsApp o por Instagram @estudio360._.</p></details>
+  </div>
+  <p class="faq-cta"><a class="btn" data-wa="Hola Graby, tengo una consulta." href="#contacto">¿Otra pregunta? Escribinos</a></p>
+</section>
+</div>
+
+<div data-view="producto" hidden>
+<section class="wrap pd" id="pdbox" aria-live="polite"></section>
+</div>
+
+<div class="cta" id="contacto">
+<section class="wrap">
+  <div>
+    <h2 class="display">Grabalo con Graby<em>.</em></h2>
+    <p>Contanos qué necesitás y cuántas piezas. Te respondemos con precio y fecha en el día.</p>
+    <a class="btn wa" href="#contacto" id="cta-main">Escribinos por WhatsApp</a>
+    <a class="btn ghost" href="https://www.instagram.com/estudio360._" target="_blank" rel="noopener">Ver trabajos en Instagram</a>
+  </div>
+  <div class="contact">
+    <div><b>Taller</b>Coronel Du Graty, Chaco</div>
+    <div><b>Instagram</b>@estudio360._</div>
+    <div><b>WhatsApp</b><span id="wa-text">3735 408500</span></div>
+    <div><b>Horario</b>Pedidos por mensaje todos los días</div>
+  </div>
+</section>
+</div>
+</main>
+
+<footer class="wrap">
+  <a class="brand" href="#inicio" aria-label="Graby, inicio">
+    <svg width="30" height="30" viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M30.72 11 A14 14 0 1 0 33.95 21.22 L34 20 L21.4 20" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="33.3" cy="15.7" r="2.2" fill="#D9702B"/></svg>
+    <span>Graby</span>
+  </a>
+  <span>Grabado láser · Sellos · Placas · 3D</span>
+  <span>Coronel Du Graty, Chaco · 2026</span>
+</footer>
+<a class="fab" data-wa="Hola Graby, quiero hacer una consulta." href="#contacto" aria-label="Escribinos por WhatsApp"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4.1A8 8 0 1 1 20 11.5z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.2-1.4-2-1-.8.7c-.9-.4-1.6-1.100-2-2l.7-.8-1-2z" fill="currentColor" stroke="none"/></svg></a>
+
+<script>
+(function(){
+  // Cargá acá el número de WhatsApp con código de país, sin + ni espacios. Ejemplo: 5493624123456
+  var WA = '5493735408500';
+  var PRODUCTS = [
+    {n:'Stickers', stk:1},
+    {n:'Llavero de acrílico espejado', p:2900},
+    {n:'Llavero destapador', p:2600, from:1},
+    {n:'Mate copita grabado', p:9400},
+    {n:'Mate de acero grabado', p:10500},
+    {n:'Mate camionero grabado', p:23900},
+    {n:'Vaso de litro de aluminio', p:null},
+    {n:'Gorra trucker con DTF', p:null}
+  ];
+  // Parámetros de tu planilla de costos (hoja Supuestos / Materiales). Si cambian, el precio de stickers se recalcula solo.
+  var SYS = {gastos:.10, merma:.10, toner:800, opp:700, desgaste:60, laminado:300, recorteMin:6, horaRecorte:10000, redondeo:500,
+             factor:[[500,2.0],[300,2.2],[0,2.5]]};
+  var STK = {'4x4':54,'5x5':35,'6,3x6,3':24,'8x8':12,'10x5':15}; // stickers por hoja A3
+  var $ = function(id){return document.getElementById(id)};
+  var fmt = function(n){return '$' + Math.round(n).toLocaleString('es-AR')};
+  var round = function(v){return v >= 3000 ? Math.round(v/100)*100 : Math.round(v/50)*50};
+  var sel = $('prod'), qty = $('qty');
+  PRODUCTS.forEach(function(x,i){var o=document.createElement('option');o.value=i;o.textContent=x.n;sel.appendChild(o)});
+  Object.keys(STK).forEach(function(k){var o=document.createElement('option');o.value=k;o.textContent=k;$('stsz').appendChild(o)});
+  function tier(q){return q>=100?20:q>=50?18:q>=10?10:0}
+  function isStk(){return !!PRODUCTS[+sel.value].stk}
+  function qn(){return Math.max(1, parseInt(qty.value,10) || 1)}
+  function stkPrice(sz, lam, cut, q){
+    var hojas = Math.ceil(q / STK[sz]);
+    var mat = SYS.toner + SYS.opp + SYS.desgaste + (lam ? SYS.laminado : 0);
+    var costo = mat * (1 + SYS.merma) * (1 + SYS.gastos);
+    if(cut) costo += (SYS.recorteMin / 60) * SYS.horaRecorte * (1 + SYS.gastos);
+    var f = SYS.factor.filter(function(r){return q >= r[0]})[0][1];
+    return {hojas:hojas, total: Math.round(hojas * costo * f / SYS.redondeo) * SYS.redondeo};
+  }
+  function stkNow(q){return stkPrice($('stsz').value, $('stfin').value === 'lam', +$('stcut').value === 1, q)}
+  function msg(){
+    var x = PRODUCTS[+sel.value], q = qn();
+    if(x.stk){
+      return 'Hola Graby, quiero un presupuesto: ' + q + ' stickers de ' + $('stsz').value + ' cm, ' + ($('stfin').value==='lam'?'laminados':'sin laminar') + ', ' + (+$('stcut').value?'recortados':'sin recortar (en plancha)') + '. ¿Me pasan precio y fecha de entrega?';
+    }
+    return 'Hola Graby, quiero un presupuesto por mayor: ' + q + ' x ' + x.n + '. ¿Me pasan precio y fecha de entrega?';
+  }
+  function calc(){
+    var x = PRODUCTS[+sel.value], st = !!x.stk, q = qn();
+    $('stk').hidden = !st;
+    if(st){
+      var r = stkNow(q);
+      $('unit').textContent = fmt(r.total/q);
+      $('disclbl').textContent = 'Hojas A3';
+      $('disc').textContent = r.hojas;
+      $('tot').textContent = fmt(r.total);
+      $('hint').textContent = 'Entran ' + STK[$('stsz').value] + ' stickers de ' + $('stsz').value + ' por hoja. Cuantos más pedís, menos sale cada uno.';
+    } else {
+      var d = tier(q);
+      $('disclbl').textContent = 'Descuento';
+      $('disc').textContent = d ? d + ' %' : '0 %';
+      if(x.p == null){
+        $('unit').textContent = 'A cotizar'; $('tot').textContent = 'A cotizar';
+        $('hint').textContent = 'Este precio lo confirmamos por WhatsApp, según el modelo y la cantidad.';
+      } else {
+        var u = d ? round(x.p*(1-d/100)) : x.p;
+        $('unit').textContent = fmt(u);
+        $('tot').textContent = fmt(u*q);
+        $('hint').textContent = (x.from ? 'Precio desde: puede variar según el modelo y el grabado. ' : '') + (q < 10 ? 'El descuento por cantidad empieza en 10 unidades.' : (q < 100 ? 'Con ' + (q < 50 ? 50 : 100) + ' unidades el descuento sube.' : 'Ya estás en el mejor descuento.'));
+      }
+    }
+    link();
+  }
+  function link(){
+    var href = WA ? 'https://wa.me/' + WA + '?text=' + encodeURIComponent(msg()) : '#contacto';
+    document.querySelectorAll('a.wa').forEach(function(a){
+      if(a.id === 'send'){a.href = href}
+      else{a.href = WA ? 'https://wa.me/' + WA + '?text=' + encodeURIComponent('Hola Graby, quiero pedir un presupuesto.') : '#contacto'}
+      if(WA){a.target='_blank';a.rel='noopener'}
+    });
+  }
+  
+
+  var CATS=['Todo','Regalos empresariales','Eventos','Comercios','Sellos','Imprenta','Textil','Placas y carteles','Regalos personales'];
+  var ITEMS=[
+   {i:'termo',c:['Regalos empresariales'],k:'Regalos · Termos',t:'Termo grabado con tu logo',d:'Termos de 1 L o 1,2 L, con logo, nombre o frase. Combina con mate y bombilla.',p:'Precio por cantidad'},
+   {i:'mates_acero',c:['Regalos empresariales','Eventos'],k:'Regalos · Mates',t:'Mate de acero grabado',d:'Acero inoxidable en blanco o negro. Ideal para souvenirs y regalos de empresa.',p:'$10.500',cut:1},
+   {i:'mate_camionero',c:['Regalos empresariales'],k:'Regalos · Mates',t:'Mate camionero de calabaza',d:'Grabado láser con tu logo o nombre. El favorito para fin de año.',p:'Precio por cantidad',cut:1},
+   {i:'mate_imperial',c:['Regalos empresariales'],k:'Regalos · Mates',t:'Mate imperial de calabaza',d:'Grabado láser con tu logo o nombre, para regalos de empresa.',p:'Precio por cantidad',cut:1},
+   {i:'vaso_chopp',c:['Regalos empresariales','Eventos'],k:'Vasos térmicos',t:'Vaso térmico cervecero',d:'Acero inoxidable de 500 ml o 1 L, con tapa destapador y tu logo grabado.',p:'Precio por cantidad',cut:1},
+   {i:'llavero3d',c:['Regalos empresariales','Eventos'],k:'Impresión 3D',t:'Llavero soporte de celular',d:'Plegable, sostiene el celular y lleva tu logo impreso en 3D.',p:'Precio por cantidad'},
+   {i:'bolsas',c:['Regalos empresariales','Textil','Comercios'],k:'Textil · Bolsas',t:'Bolsas de friselina sublimadas',d:'Livianas, reutilizables y con tu diseño a todo color.',p:'Precio por cantidad'},
+   {i:'vaso_evento',c:['Eventos','Regalos empresariales'],k:'Eventos · Vasos',t:'Vaso de litro de aluminio',d:'De aluminio, de 1 litro, no se rompe en la fiesta. Con escudo, nombre o logo. Ideal para fernet.',p:'Precio por cantidad'},
+   {i:'trofeo',c:['Eventos'],k:'Eventos · Trofeos',t:'Trofeos de acrílico y MDF',d:'25 cm de alto, con nombre, evento y año grabados.',p:'Desde $16.400'},
+   {i:'qr_cartas',c:['Comercios'],k:'Carteles · QR',t:'QR para cartas',d:'Acrílico dorado, plateado o negro, con el diseño de tu marca.',p:'Precio por cantidad'},
+   {i:'qr_google',c:['Comercios'],k:'Carteles · QR',t:'QR para reseñas de Google',d:'Acrílico transparente de 4 mm, en 10x15 o 15x20 cm.',p:'Precio por cantidad'},
+   {i:'qr_negocio',c:['Comercios'],k:'Carteles · QR',t:'Cartel QR para tu negocio',d:'Acrílico o MDF a medida, con redes y datos de pago.',p:'Precio por cantidad'},
+   {i:'qr_menu',c:['Comercios'],k:'Carteles · 3D',t:'QR para menús en 3D',d:'Letras en relieve con el QR de tu carta, resistentes al calor y a los golpes.',p:'Precio por cantidad'},
+   {i:'sellos_auto',c:['Sellos','Comercios'],k:'Sellos · Automáticos',t:'Sello automático',d:'5 medidas, de 26x9 a redondo 40. Entintado automático, sin almohadilla aparte.',p:'Desde $18.400',cut:1},
+   {i:'sello_manual',c:['Sellos'],k:'Sellos · Manuales',t:'Sello manual de goma',d:'4x2, 5x5, 8x5 y redondo, con mango de madera. Almohadilla aparte ($7.900).',p:'Desde $15.900'},
+   {i:'sellos_cajas',c:['Sellos','Comercios'],k:'Sellos · Grandes',t:'Sellos grandes para cajas',d:'Para marcar cajas y bolsas con tu logo. Goma grabada a láser con base de madera.',p:'Consultá precio'},
+   {i:'placa_recuerdo',c:['Placas y carteles'],k:'Placas · Recordatorias',t:'Placa recordatoria',d:'Acrílico negro, dorado o plateado, de 15x10 a 30x20 cm. Te mostramos la prueba antes.',p:'Consultá precio'},
+   {i:'neon',c:['Placas y carteles','Comercios'],k:'Cartelería',t:'Cartel de neón LED',d:'Letras y logos en neón sobre base de MDF, para interior.',p:'Presupuesto a medida'},
+   {i:'corporeo',c:['Placas y carteles','Comercios'],k:'Cartelería',t:'Carteles corpóreos',d:'Letras en polifán o PETG 3D, con LED de frente o de fondo. Lo colocamos nosotros.',p:'Presupuesto a medida'},
+   {i:'sello_comestible',c:['Sellos','Comercios'],k:'Gastronomía · Sellos',t:'Sellos para comida',d:'Para marcar empanadas, panes y pastas con tinta comestible. Uno por sabor o con tu logo.',p:'Consultá precio'},
+   {i:'llavero_foto',c:['Regalos personales'],k:'Llaveros · Fotograbado',t:'Llavero de acero con fotograbado',d:'Mandanos la foto de tu mascota o tu familia: la pasamos a dibujo y la grabamos a láser.',p:'Consultá precio',cut:1},
+   {i:'mate_copita',c:['Eventos','Regalos personales'],k:'Regalos · Mates',t:'Mate copita para souvenirs',d:'Madera, tamaño clásico, grabado con tu logo o un nombre.',p:'$9.400',cut:1},
+   {i:'birome',c:['Regalos empresariales','Imprenta'],k:'Papelería corporativa',t:'Birome de bambú grabada',d:'Retráctil, con detalles cromados. Área de grabado de 0,5 x 4 cm.',p:'Precio por cantidad',cut:1},
+   {i:'jarro_chopp',c:['Regalos empresariales','Eventos'],k:'Bar · Vasos térmicos',t:'Jarro chopp de acero',d:'Térmico de 500 ml, con tu logo grabado a láser.',p:'Precio por cantidad',cut:1},
+   {i:'llavero_acrilico',c:['Regalos empresariales','Regalos personales'],k:'Llaveros · Acrílico',t:'Llavero de acrílico espejado',d:'Bicapa dorado o plateado, en círculo, corazón o con la forma de tu logo.',p:'Precio por cantidad'},
+   {i:'llaveros3d',c:['Regalos empresariales','Regalos personales'],k:'Impresión 3D',t:'Llaveros 3D con tu diseño',d:'Con tu inicial o el logo de tu local. Ideales para regalar.',p:'Precio por cantidad'},
+   {i:'pulseras',c:['Eventos'],k:'Eventos · Accesos',t:'Pulseras tyvek',d:'No se rompen ni se mojan. Numeradas, con cierre que no se abre e impresas con tu evento.',p:'Precio por cantidad',cut:1},
+   {i:'ticket',c:['Eventos'],k:'Eventos · Accesos',t:'Entradas infalsificables',d:'108 x 60 mm, con textos e imágenes que solo se ven con luz UV.',p:'Precio por cantidad',cut:1},
+   {i:'vasos750',c:['Eventos'],k:'Eventos · Promos',t:'Vaso de 750 ml con vinilo',d:'Plástico, con escudo, nombre o logo. Para egresados, bodas y peñas.',p:'Precio por cantidad'},
+   {i:'stickers',c:['Imprenta','Comercios'],k:'Impresión · Stickers',t:'Stickers a medida',d:'Vinilo, papel u OPP, con o sin laminado y recortados. Para packaging, frascos y bolsas.',p:'Precio por plancha',cut:1},
+   {i:'papeleria',c:['Imprenta','Regalos empresariales'],k:'Imprenta',t:'Papelería empresarial',d:'Tarjetas, hojas membretadas, sobres, carpetas, talonarios, folletos y etiquetas.',p:'Precio por cantidad'},
+   {i:'carpetas',c:['Imprenta'],k:'Imprenta',t:'Carpetas institucionales',d:'Impresas con tu marca, para presentaciones, clientes y eventos.',p:'Precio por cantidad',cut:1},
+   {i:'recetarios',c:['Imprenta','Comercios'],k:'Imprenta',t:'Recetarios y talonarios',d:'Con tu logo y tus datos, en el tamaño que uses.',p:'Precio por cantidad',cut:1},
+   {i:'anotadores',c:['Imprenta','Regalos empresariales'],k:'Imprenta',t:'Anotadores anillados',d:'Con la tapa impresa con tu marca. Para eventos y regalos de empresa.',p:'Precio por cantidad'},
+   {i:'remeras',c:['Textil'],k:'Textil · Remeras',t:'Remeras con tu diseño',d:'Oversize, clásico o boxy fit, en DTF o sublimación. También chombas para tu equipo.',p:'Desde $17.500',cut:1},
+   {i:'gorras',c:['Textil','Regalos empresariales'],k:'Textil · Gorras',t:'Gorra trucker con DTF',d:'Tu logo estampado en DTF, a todo color. 11 colores de gorra, consultá stock.',p:'Precio por cantidad',cut:1},
+   {i:'tambor',c:['Regalos personales'],k:'Impresión 3D · Deco',t:'Portalatas tambor 3D',d:'Impreso en el color que elijas, con detalles en un segundo color y tu nombre o logo.',p:'Consultá precio'}
+,
+   {i:'centro_mesa',c:['Eventos'],k:'Eventos · Egresados',t:'Centro de mesa para egresados',d:'Acrílico espejado dorado, plateado o negro, con nombre y año cortados a láser. Con base.',p:'Precio por cantidad',cut:1},
+   {i:'mdf_corazon',c:['Eventos','Regalos personales'],k:'Eventos · Souvenirs',t:'Cajas y souvenirs de MDF',d:'Maceteros, cajas, placas y recuerdos para cumpleaños, bautismos y casamientos.',p:'Precio por cantidad'}
+  ];
+  ITEMS.sort(function(a,b){return CATS.indexOf(a.c[0])-CATS.indexOf(b.c[0])});
+  var cur='Todo';
+  var arrow='<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
+  function esc(x){return String(x).replace(/[&<>"]/g,function(m){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m]})}
+  function waHref(t){return 'https://wa.me/'+WA+'?text='+encodeURIComponent('Hola Graby, quiero consultar por: '+t+'. ¿Me pasan precio por cantidad?')}
+  function drawFilters(){
+    $('filters').innerHTML=CATS.map(function(c){return '<button type="button" aria-pressed="'+(c===cur)+'">'+esc(c)+'</button>'}).join('');
+  }
+  var SYN={mate:'mate mates bombilla yerba',termo:'termo termos frio calor',sello:'sello sellos stamp automatico manual',cartel:'cartel carteles letrero letras fachada luz led neon',qr:'qr carta menu resenas google',llavero:'llavero llaveros regalo',vaso:'vaso vasos fernet cerveza chopp',remera:'remera remeras ropa camiseta chomba',gorra:'gorra gorras',sticker:'sticker stickers etiqueta etiquetas calcomania',tarjeta:'tarjeta tarjetas papeleria',egresado:'egresado egresados egresados fiesta',boda:'boda casamiento souvenir souvenirs bautismo cumple',trofeo:'trofeo trofeos premio medalla'};
+  function norm(x){return String(x).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'')}
+  ITEMS.forEach(function(x){x.h=norm([x.t,x.d,x.k,x.c.join(' '),x.i].join(' '))});
+  ITEMS.forEach(function(x){Object.keys(SYN).forEach(function(k){if(x.h.indexOf(k)>-1)x.h+=' '+SYN[k]})});
+  var qs='';
+  function match(x){
+    if(cur!=='Todo'&&x.c.indexOf(cur)<0)return false;
+    var w=norm(qs).split(/\s+/).filter(Boolean);
+    return w.every(function(t){return x.h.indexOf(t)>-1});
+  }
+  var PAGE=8,lim=PAGE;
+  function drawCat(keep){
+    if(keep!==true)lim=PAGE;
+    var list=ITEMS.filter(match);
+    $('count').textContent=(qs&&list.length)?(list.length+(list.length===1?' resultado':' resultados')+' para “'+qs+'”'):'';
+    if(!list.length){
+      var m='Hola Graby, busco: '+(qs||'un producto')+'. ¿Lo hacen?';
+      $('morewrap').hidden=true;
+      $('cat').innerHTML='<div class="none"><b>No encontramos “'+esc(qs)+'” en el catálogo</b><p>Igual puede que lo hagamos. Escribinos y te contestamos en el día.</p><a class="btn wa" target="_blank" rel="noopener" href="https://wa.me/'+WA+'?text='+encodeURIComponent(m)+'">Consultar por WhatsApp</a></div>';
+      return;
+    }
+    $('cat').innerHTML=list.slice(0,lim).map(card).join('');
+    var mw=$('morewrap');mw.hidden=list.length<=PAGE;
+    if(!mw.hidden){var sh=Math.min(lim,list.length);$('moreinfo').textContent='Mostrando '+sh+' de '+list.length;$('more').textContent=sh<list.length?'Ver más productos':'Ver menos';}
+  }
+  function card(x){
+    return '<a class="item" href="#p-'+x.i+'">'+
+      '<div class="pic'+(x.cut?' cut':'')+'"><img src="img/'+x.i+'.jpg" alt="'+esc(x.t)+'" loading="lazy"></div>'+
+      '<div class="info"><div><small>'+esc(x.k)+'</small><h3>'+esc(x.t)+'</h3><p>'+esc(x.d)+'</p><div class="price">'+esc(x.p)+'</div></div><span class="go">'+arrow+'</span></div></a>';
+  }
+  var BASE=document.title;
+  function related(x){
+    return ITEMS.filter(function(y){return y!==x}).map(function(y){
+      var sh=y.c.filter(function(c){return x.c.indexOf(c)>-1}).length;
+      return {y:y,s:sh*10+(y.c[0]===x.c[0]?5:0)+(y.k.split(' · ')[0]===x.k.split(' · ')[0]?3:0)};
+    }).sort(function(a,b){return b.s-a.s}).slice(0,4).map(function(o){return o.y});
+  }
+  function drawProd(id){
+    var x=ITEMS.filter(function(y){return y.i===id})[0];
+    if(!x){location.hash='rubros';return false}
+    var msg='Hola Graby, quiero consultar por: '+x.t+'. ¿Me pasan precio por cantidad?';
+    $("pdbox").innerHTML=
+      '<a class="back" href="#rubros">&larr; Volver al catálogo</a>'+
+      '<div class="pd-grid">'+
+        '<div class="pd-img'+(x.cut?' cut':'')+'"><img src="img/'+x.i+'.jpg" alt="'+esc(x.t)+'"></div>'+
+        '<div class="pd-txt">'+
+          '<span class="mono">'+esc(x.k)+'</span>'+
+          '<h1 tabindex="-1" id="pd-h">'+esc(x.t)+'</h1>'+
+          '<p class="lead">'+esc(x.d)+'</p>'+
+          '<div class="pd-price"><small>Precio</small><b>'+esc(x.p)+'</b><span>Mandanos tu logo o idea y la cantidad. Te respondemos con precio y fecha en el día.</span></div>'+
+          '<div class="pd-act"><a class="btn" target="_blank" rel="noopener" href="https://wa.me/'+WA+'?text='+encodeURIComponent(msg)+'">Consultar por WhatsApp</a><a class="btn alt" href="#rubros">Ver más productos</a></div>'+
+          '<div class="pd-tags">'+x.c.map(function(c){return '<a href="#rubros" data-cat="'+esc(c)+'">'+esc(c)+'</a>'}).join('')+'</div>'+
+        '</div>'+
+      '</div>'+
+      '<div class="pd-rel"><h2 class="display">También te puede servir.</h2><div class="cat">'+related(x).map(card).join('')+'</div></div>';
+    document.title=x.t+' · '+BASE;
+    return true;
+  }
+  $('q').addEventListener('input',function(){qs=this.value.trim();$('searchbox').classList.toggle('has',!!this.value);drawCat()});
+  $('qx').addEventListener('click',function(){var q=$('q');q.value='';qs='';$('searchbox').classList.remove('has');drawCat();q.focus()});
+  $('more').addEventListener('click',function(){var n=ITEMS.filter(match).length;if(lim>=n){lim=PAGE;drawCat(true);$('rubros').scrollIntoView({block:'start'})}else{lim+=PAGE;drawCat(true)}});
+  $('filters').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;cur=b.textContent;drawFilters();drawCat()});
+  drawFilters();drawCat();
+  document.querySelectorAll('.evgrid').forEach(function(g){g.innerHTML=g.getAttribute('data-ids').split(',').map(function(id){return ITEMS.filter(function(x){return x.i===id})[0]}).filter(Boolean).map(card).join('')});
+
+  function setWa(){document.querySelectorAll('[data-wa]').forEach(function(a){a.href='https://wa.me/'+WA+'?text='+encodeURIComponent(a.getAttribute('data-wa'));a.target='_blank';a.rel='noopener'})}
+  setWa();
+  var VIEWS=['servicios','carteleria','eventos','pedir'];
+  function show(v){
+    document.querySelectorAll('[data-view]').forEach(function(el){el.hidden=el.getAttribute('data-view')!==v});
+    document.querySelectorAll('.nav a').forEach(function(a){var h=a.getAttribute('href').slice(1);a.classList.toggle('on',(v==='home'&&h==='inicio')||h===v)});
+  }
+  function route(){
+    var h=location.hash.slice(1);
+    if(h.indexOf('p-')===0){if(drawProd(h.slice(2))){show('producto');window.scrollTo(0,0);var hh=document.getElementById('pd-h');if(hh)hh.focus({preventScroll:true})}return}
+    document.title=BASE;
+    if(!h||h==='inicio'){show('home');window.scrollTo(0,0);return}
+    if(VIEWS.indexOf(h)>-1){show(h);window.scrollTo(0,0);return}
+    var t=document.getElementById(h);if(!t)return;
+    var vw=t.closest('[data-view]');if(vw)show(vw.getAttribute('data-view'));
+    t.scrollIntoView();
+  }
+  document.addEventListener('click',function(e){
+    var a=e.target.closest('[data-cat]');if(!a)return;
+    e.preventDefault();cur=a.getAttribute('data-cat');drawFilters();drawCat();
+    if(location.hash==='#rubros')route();else location.hash='rubros';
+  });
+  window.addEventListener('hashchange',route);
+  route();
+  ['prod','stsz','stfin','stcut'].forEach(function(id){$(id).addEventListener('change',calc)});qty.addEventListener('input',calc);calc();
+})();
+</script>
+<script>
+(function(){
+  var BOX=[['sellos_auto','Sellos automáticos','A medida'],['mate_copita','Mate copita','$9.400'],['mates_acero','Mate de acero','$10.500'],['jarro_chopp','Jarro chopp','Por cantidad'],['llavero_foto','Llavero grabado','Por cantidad'],['pulseras','Pulseras para eventos','Por cantidad']];
+  var GAL=[['mates_acero','Mate de acero','$10.500'],['mate_copita','Mate copita','$9.400'],['mate_camionero','Mate camionero','$23.900'],['jarro_chopp','Jarro chopp','Por cantidad'],['vaso_evento','Vaso de litro de aluminio','Por cantidad'],['gorras','Gorra trucker con DTF','Por cantidad'],['trofeo','Trofeos','Desde $16.400'],['llavero_acrilico','Llavero de acrílico','$2.900'],['stickers','Stickers','100 desde $9.500'],['sello_manual','Sellos','A medida'],['centro_mesa','Centro de mesa','Por cantidad'],['placa_recuerdo','Placas','Consultá precio'],['corporeo','Carteles con luz','A medida']];
+  var track=document.getElementById('xtrack');
+  track.innerHTML=GAL.map(function(g){return '<a class="x-card" href="#p-'+g[0]+'"><img src="img/'+g[0]+'.jpg" alt="'+g[1]+'" loading="lazy"><div><b>'+g[1]+'</b><span>'+g[2]+'</span></div></a>'}).join('');
+  var sec=document.getElementById('caja'),items=document.getElementById('xitems'),bBack=document.getElementById('bBack'),bFront=document.getElementById('bFront'),bLid=document.getElementById('bLid'),head=document.getElementById('xhead'),cue=document.getElementById('xcue'),lead=document.getElementById('xlead');
+  var PEEK=[{x:-90,y:-30,r:-12},{x:-40,y:-60,r:-6},{x:-15,y:-78,r:-2},{x:20,y:-76,r:3},{x:55,y:-58,r:7},{x:95,y:-28,r:12}],OFF=[0,.015,.03,.045,.06,.075],CZ=[2,4,6,6,4,2],END=[],els=[],K=1,CARD=190,rows=1;
+  BOX.forEach(function(b,i){var a=document.createElement('a');a.className='x-it';a.href='#p-'+b[0];a.style.zIndex=CZ[i];
+    a.innerHTML='<img src="img/c_'+b[0]+'.webp" alt="'+b[1]+'"><span class="x-cap"><b>'+b[1]+'</b><span>'+b[2]+'</span></span>';items.appendChild(a);els.push(a)});
+  function cl(v){return v<0?0:v>1?1:v}
+  function kf(p,xs,ys){if(p<=xs[0])return ys[0];for(var i=1;i<xs.length;i++){if(p<=xs[i]){var u=(p-xs[i-1])/(xs[i]-xs[i-1]);return ys[i-1]+(ys[i]-ys[i-1])*u}}return ys[ys.length-1]}
+  function vis(){return sec.offsetParent!==null}
+  function layout(){
+    var w=sec.clientWidth,h=window.innerHeight;if(!w)return;
+    K=Math.min(1,(w-32)/460,h/860);
+    var cols=w>=900?6:(w>=560?3:2);rows=6/cols;
+    var sp=Math.min(250,(w-24)/cols);CARD=Math.round(Math.min(190,sp-26,cols===6?190:(h*.58)/rows-64));
+    var rg=CARD+72,cy=rows>1?(-.07*h-((rows-1)*rg)/2+8):0;
+    END=BOX.map(function(_,i){var c=i%cols,r=Math.floor(i/cols);return {x:(c-(cols-1)/2)*sp,y:cy+r*rg}});
+    els.forEach(function(a){a.style.width=a.style.height=CARD+'px';a.style.left=a.style.top=(-CARD/2)+'px'});
+  }
+  function draw(){
+    if(!vis()||!END.length)return;
+    var r=sec.getBoundingClientRect(),h=window.innerHeight,p=cl(-r.top/(r.height-h)),ky=Math.min(1.15,h/820);
+    var boxY=kf(p,[0,.18,.45,.7,1],[130,20,90,600,900])*ky,exit=kf(p,[.6,.75],[1,0]),lid=kf(p,[.18,.34],[0,1]);
+    var base='translate3d(0,'+boxY+'px,0) scale('+K+')';
+    bBack.style.transform=base;bBack.style.opacity=cl(lid*4)*exit;
+    bFront.style.transform=base;bFront.style.opacity=exit;
+    bLid.style.transform='translate3d(0,'+(boxY-70*lid*K)+'px,0) rotate('+(-14*lid)+'deg) scale('+(K*(1+.08*lid))+')';bLid.style.opacity=1-lid;
+    items.style.display=p>=.30?'block':'none';
+    items.style.zIndex=(boxY>150*ky||p>=.52)?40:2;
+    for(var i=0;i<6;i++){var o=OFF[i],xs=[.30+o,.50+o,.55+o,.78+o],P=PEEK[i],E=END[i];
+      var x=kf(p,xs,[0,P.x*K,P.x*K,E.x]),y=kf(p,xs,[60*K,P.y*K,P.y*K,E.y]),ro=kf(p,xs,[0,P.r,P.r,0]),sc=kf(p,xs,[.5*K,.78*K,.78*K,1]);
+      els[i].style.transform='translate3d('+x+'px,'+y+'px,0) rotate('+ro+'deg) scale('+sc+')';
+      els[i].classList.toggle('x-out',p>=xs[3]-.03)}
+    head.style.opacity=rows>1?1-cl((p-.5)/.12):1;
+    cue.style.opacity=1-cl(p/.06);lead.style.opacity=1-cl((p-.2)/.1);
+  }
+  var gal=document.getElementById('galeria'),pinOn=false,dist=0,gx=0,gt=0;
+  function setupPin(){
+    var want=window.innerWidth>=769&&vis();
+    gal.classList.toggle('pin',want);pinOn=want;
+    if(want){track.style.transform='translate3d(0,0,0)';dist=Math.max(0,track.scrollWidth-gal.clientWidth+40);gal.style.height=(window.innerHeight+dist)+'px'}
+    else{gal.style.height='';track.style.transform='';dist=0}
+  }
+  var ticking=false;
+  function frame(){ticking=false;draw();
+    if(pinOn){var r=gal.getBoundingClientRect();gt=cl(-r.top/Math.max(1,dist))*dist;gx+=(gt-gx)*.12;if(Math.abs(gt-gx)<.3)gx=gt;track.style.transform='translate3d('+(-gx)+'px,0,0)';if(gx!==gt)req()}}
+  function req(){if(!ticking){ticking=true;requestAnimationFrame(frame)}}
+  function resize(){layout();setupPin();req()}
+  window.addEventListener('scroll',req,{passive:true});window.addEventListener('resize',resize);window.addEventListener('load',resize);
+  window.addEventListener('hashchange',function(){setTimeout(resize,0);setTimeout(resize,250)});
+  resize();
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var d=e.target.getAttribute('data-delay');if(d)e.target.style.animationDelay=d+'s';e.target.classList.add('go');io.unobserve(e.target)}})},{rootMargin:'-40px'});
+    document.querySelectorAll('.sig,.rise').forEach(function(n){io.observe(n)});
+  }
+})();
+</script>
+</body>
+</html>
