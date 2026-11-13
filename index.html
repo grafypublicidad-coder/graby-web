@@ -922,6 +922,7 @@ section[id],div[id]{scroll-margin-top:84px}
    {i:'tambor',c:['Regalos personales'],k:'Impresión 3D · Deco',t:'Portalatas tambor 3D',d:'Impreso en el color que elijas, con detalles en un segundo color y tu nombre o logo.',p:'Consultá precio'}
 ,
    {i:'centro_mesa',c:['Eventos'],k:'Eventos · Egresados',t:'Centro de mesa para egresados',d:'Acrílico espejado dorado, plateado o negro, con nombre y año cortados a láser. Con base.',p:'Precio por cantidad',cut:1},
+   {i:'base_torta',c:['Comercios','Eventos'],k:'Pastelería · Bases',t:'Bases para torta de MDF grabadas',d:'Fibrofácil blanco con tu logo grabado a láser. Cuadrada con puntas redondas de 25x25 cm; también redondas y otras formas. Pack de 10 unidades.',p:'Desde $22.000 · pack x10'},
    {i:'mdf_corazon',c:['Eventos','Regalos personales'],k:'Eventos · Souvenirs',t:'Cajas y souvenirs de MDF',d:'Maceteros, cajas, placas y recuerdos para cumpleaños, bautismos y casamientos.',p:'Precio por cantidad'}
   ];
   ITEMS.sort(function(a,b){return CATS.indexOf(a.c[0])-CATS.indexOf(b.c[0])});
@@ -932,7 +933,7 @@ section[id],div[id]{scroll-margin-top:84px}
   function drawFilters(){
     $('filters').innerHTML=CATS.map(function(c){return '<button type="button" aria-pressed="'+(c===cur)+'">'+esc(c)+'</button>'}).join('');
   }
-  var SYN={mate:'mate mates bombilla yerba',termo:'termo termos frio calor',sello:'sello sellos stamp automatico manual',cartel:'cartel carteles letrero letras fachada luz led neon',qr:'qr carta menu resenas google',llavero:'llavero llaveros regalo',vaso:'vaso vasos fernet cerveza chopp',remera:'remera remeras ropa camiseta chomba',gorra:'gorra gorras',sticker:'sticker stickers etiqueta etiquetas calcomania',tarjeta:'tarjeta tarjetas papeleria',egresado:'egresado egresados egresados fiesta',boda:'boda casamiento souvenir souvenirs bautismo cumple',trofeo:'trofeo trofeos premio medalla'};
+  var SYN={mate:'mate mates bombilla yerba',termo:'termo termos frio calor',sello:'sello sellos stamp automatico manual',cartel:'cartel carteles letrero letras fachada luz led neon',qr:'qr carta menu resenas google',llavero:'llavero llaveros regalo',vaso:'vaso vasos fernet cerveza chopp',remera:'remera remeras ropa camiseta chomba',gorra:'gorra gorras',sticker:'sticker stickers etiqueta etiquetas calcomania',tarjeta:'tarjeta tarjetas papeleria',egresado:'egresado egresados egresados fiesta',boda:'boda casamiento souvenir souvenirs bautismo cumple',trofeo:'trofeo trofeos premio medalla',torta:'torta tortas base bases pasteleria tortera fibrofacil mdf'};
   function norm(x){return String(x).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'')}
   ITEMS.forEach(function(x){x.h=norm([x.t,x.d,x.k,x.c.join(' '),x.i].join(' '))});
   ITEMS.forEach(function(x){Object.keys(SYN).forEach(function(k){if(x.h.indexOf(k)>-1)x.h+=' '+SYN[k]})});
