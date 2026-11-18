@@ -510,6 +510,8 @@ section[id],div[id]{scroll-margin-top:84px}
         <div class="fld"><label for="stsz">Medida (cm)</label><select id="stsz"></select></div>
         <div class="fld"><label for="stfin">Terminación</label>
           <select id="stfin"><option value="lam">Laminado</option><option value="sin">Sin laminar</option></select></div>
+        <div class="fld"><label for="stink">Cantidad de tinta</label>
+          <select id="stink"><option value="normal">Normal (texto y logos)</option><option value="mucha">Mucha tinta (diseños con color)</option><option value="llena">Llena (fondo completo o fotos)</option></select></div>
         <div class="fld"><label for="stcut">Recorte</label>
           <select id="stcut"><option value="0">Sin recortar (en plancha)</option><option value="1">Recortados</option></select></div>
       </div>
@@ -808,7 +810,8 @@ section[id],div[id]{scroll-margin-top:84px}
     {n:'Gorra trucker con DTF', p:6000, from:1, id:'gorras'}
   ];
   // Parámetros de tu planilla de costos (hoja Supuestos / Materiales). Si cambian, el precio de stickers se recalcula solo.
-  var SYS = {gastos:.10, merma:.10, toner:800, opp:700, desgaste:60, laminado:300, recorteMin:6, horaRecorte:10000, redondeo:500,
+  var SYS = {gastos:.10, merma:.10, toner:800, opp:550, desgaste:60, laminado:300, recorteMin:6, horaRecorte:10000, redondeo:500, minHoja:3600,
+             tinta:{normal:1, mucha:2, llena:10/3},
              factor:[[500,2.0],[300,2.2],[0,2.5]]};
   var STK = {'4x4':54,'5x5':35,'6,3x6,3':24,'8x8':12,'10x5':15}; // stickers por hoja A3
   var $ = function(id){return document.getElementById(id)};
@@ -820,21 +823,22 @@ section[id],div[id]{scroll-margin-top:84px}
   function tier(q,x){var b=q>=100?20:q>=50?18:q>=10?10:0;return (x&&x.d50&&q>=50)?Math.max(b,x.d50):b}
   function isStk(){return !!PRODUCTS[+sel.value].stk}
   function qn(){return Math.max(1, parseInt(qty.value,10) || 1)}
-  function stkPrice(sz, lam, cut, q){
+  function stkPrice(sz, lam, cut, q, ink){
     var hojas = Math.ceil(q / STK[sz]);
-    var mat = SYS.toner + SYS.opp + SYS.desgaste + (lam ? SYS.laminado : 0);
+    var mat = SYS.toner * (SYS.tinta[ink] || 1) + SYS.opp + SYS.desgaste + (lam ? SYS.laminado : 0);
     var costo = mat * (1 + SYS.merma) * (1 + SYS.gastos);
     if(cut) costo += (SYS.recorteMin / 60) * SYS.horaRecorte * (1 + SYS.gastos);
     var f = SYS.factor.filter(function(r){return q >= r[0]})[0][1];
-    return {hojas:hojas, total: Math.round(hojas * costo * f / SYS.redondeo) * SYS.redondeo};
+    var hoja = Math.max(costo * f, SYS.minHoja); // precio mínimo por hoja A3
+    return {hojas:hojas, total: Math.round(hojas * hoja / SYS.redondeo) * SYS.redondeo};
   }
-  function stkNow(q){return stkPrice($('stsz').value, $('stfin').value === 'lam', +$('stcut').value === 1, q)}
+  function stkNow(q){return stkPrice($('stsz').value, $('stfin').value === 'lam', +$('stcut').value === 1, q, $('stink').value)}
   var SITE='https://graby.online/';
   function refLine(x){return x.id ? '\nReferencia: ' + SITE + '#p-' + x.id : ''}
   function msg(){
     var x = PRODUCTS[+sel.value], q = Math.max(qn(), x.min || 0);
     if(x.stk){
-      return 'Hola Graby, quiero un presupuesto: ' + q + ' stickers de ' + $('stsz').value + ' cm, ' + ($('stfin').value==='lam'?'laminados':'sin laminar') + ', ' + (+$('stcut').value?'recortados':'sin recortar (en plancha)') + '. ¿Me pasan precio y fecha de entrega?' + refLine(x);
+      return 'Hola Graby, quiero un presupuesto: ' + q + ' stickers de ' + $('stsz').value + ' cm, ' + ($('stfin').value==='lam'?'laminados':'sin laminar') + ', ' + {normal:'tinta normal',mucha:'con mucha tinta',llena:'con tinta llena'}[$('stink').value] + ', ' + (+$('stcut').value?'recortados':'sin recortar (en plancha)') + '. ¿Me pasan precio y fecha de entrega?' + refLine(x);
     }
     return 'Hola Graby, quiero un presupuesto por mayor: ' + q + ' x ' + x.n + '. ¿Me pasan precio y fecha de entrega?' + refLine(x);
   }
@@ -1025,7 +1029,7 @@ section[id],div[id]{scroll-margin-top:84px}
   });
   window.addEventListener('hashchange',route);
   route();
-  ['prod','stsz','stfin','stcut'].forEach(function(id){$(id).addEventListener('change',calc)});qty.addEventListener('input',calc);calc();
+  ['prod','stsz','stfin','stcut','stink'].forEach(function(id){$(id).addEventListener('change',calc)});qty.addEventListener('input',calc);calc();
 })();
 </script>
 <script>
