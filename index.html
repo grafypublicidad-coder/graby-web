@@ -520,7 +520,7 @@ section[id],div[id]{scroll-margin-top:84px}
       <a class="ref" id="ref" href="#rubros" hidden><img id="refimg" src="img/stickers.jpg" alt=""><span><small>Referencia del pedido</small><b id="refname"></b><i>Ver la ficha del producto</i></span></a>
       <div class="out" aria-live="polite">
         <div><small>Por unidad</small><strong id="unit">-</strong></div>
-        <div><small id="disclbl">Descuento</small><strong id="disc">-</strong></div>
+        <div id="discw"><small id="disclbl">Descuento</small><strong id="disc">-</strong></div>
         <div><small>Total</small><strong id="tot">-</strong></div>
       </div>
       <p class="note" id="hint"></p>
@@ -852,12 +852,12 @@ section[id],div[id]{scroll-margin-top:84px}
     if(st){
       var r = stkNow(q);
       $('unit').textContent = fmt(r.total/q);
-      $('disclbl').textContent = 'Hojas A3';
-      $('disc').textContent = r.hojas;
+      $('discw').hidden = true; $('calc').querySelector('.out').style.gridTemplateColumns = 'repeat(2,minmax(0,1fr))';
       $('tot').textContent = fmt(r.total);
-      $('hint').textContent = 'Entran ' + STK[$('stsz').value] + ' stickers de ' + $('stsz').value + ' por hoja. Cuantos más pedís, menos sale cada uno.';
+      $('hint').textContent = 'Cuantos más pedís, menos sale cada sticker.';
     } else {
       var d = tier(q,x);
+      $('discw').hidden = false; $('calc').querySelector('.out').style.gridTemplateColumns = '';
       $('disclbl').textContent = 'Descuento';
       $('disc').textContent = d ? d + ' %' : '0 %';
       if(x.min && q < x.min){
